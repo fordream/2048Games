@@ -92,7 +92,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-  return 2;
+  return 1;
 }
 
 
@@ -114,8 +114,8 @@
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Settings Cell"];
   
   if (indexPath.section) {
-    cell.textLabel.text = @"About 2048";
-    cell.detailTextLabel.text = @"";
+//    cell.textLabel.text = @"About 2048";
+//    cell.detailTextLabel.text = @"";
   } else {
     cell.textLabel.text = [_options objectAtIndex:indexPath.row];
     
