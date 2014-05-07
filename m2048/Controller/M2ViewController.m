@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Danqing. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "M2ViewController.h"
 #import "M2SettingsViewController.h"
 
@@ -60,6 +61,15 @@
   
   _scene = scene;
   _scene.delegate = self;
+    
+    //ADView
+    CGRect rect = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 52, 0, 0);
+    _adView = [[ADBannerView alloc] initWithFrame:rect];
+	[skView addSubview:_adView];
+	_adView.delegate = self;
+	_adView.hidden = YES;
+    
+//	_adView.requiredContentSizeIdentifiers = [NSSet setWithObjects: ADBannerContentSizeIdentifierPortrait, ADBannerContentSizeIdentifierLandscape, nil];
 }
 
 
@@ -198,5 +208,21 @@
   [super didReceiveMemoryWarning];
   // Release any cached data, images, etc that aren't in use.
 }
+
+//***ADView
+-(void)bannerViewWillLoadAd:(ADBannerView *)banner{NSLog(@"vill load");}
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner{
+    NSLog(@"%d",_adView.bannerLoaded);
+	_adView.hidden = NO;
+	NSLog(@"did load");
+}
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
+    NSLog(@"error:%@",error);
+}
+-(BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave{
+    NSLog(@"should begin");
+	return YES;
+}
+-(void)bannerViewActionDidFinish:(ADBannerView *)banner{NSLog(@"did finish");}
 
 @end
