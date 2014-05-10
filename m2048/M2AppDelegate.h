@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#define AdsRemoved @"AdsRemoved"
+
 
 @interface M2AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
++(BOOL)hadRemovedAds;
 
 @end

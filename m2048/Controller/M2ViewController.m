@@ -100,7 +100,7 @@
   
   _subtitle.textColor = [GSTATE buttonColor];
   _subtitle.font = [UIFont fontWithName:[GSTATE regularFontName] size:14];
-  _subtitle.text = [NSString stringWithFormat:@"Join the numbers to get to %ld!", target];
+  _subtitle.text = [NSString stringWithFormat:NSLocalizedString(@"Join the numbers to get to %ld!", nil) , target];
   
   _overlay.message.font = [UIFont fontWithName:[GSTATE boldFontName] size:36];
   _overlay.keepPlaying.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17];
@@ -164,10 +164,10 @@
   
   if (!won) {
     _overlay.keepPlaying.hidden = YES;
-    _overlay.message.text = @"Game Over";
+    _overlay.message.text = NSLocalizedString( @"Game Over", nil);
   } else {
     _overlay.keepPlaying.hidden = NO;
-    _overlay.message.text = @"You Win!";
+    _overlay.message.text = NSLocalizedString(@"You Win!",nil);
   }
   
   // Fake the overlay background as a mask on the board.

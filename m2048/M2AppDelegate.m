@@ -8,13 +8,15 @@
 
 #import "M2AppDelegate.h"
 #import "Appirater/Appirater.h"
+#import "MKStoreManager.h"
 
 @implementation M2AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
-  return YES;
+    [MKStoreManager sharedManager];
+    NSLog(@"init");
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -46,6 +48,19 @@
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
++(BOOL)hadRemovedAds{
+    BOOL pRet = NO;
 
+    if ([SKPaymentQueue canMakePayments]) {
+        SKProduct* product = [[MKStoreManager sharedManager].purchasableObjects objectAtIndex:0];
+        
+        if ([MKStoreManager isFeaturePurchased:product.productIdentifier]) {
+            pRet = YES;
+        }
+    }
+
+    
+    return pRet;
+}
 
 @end

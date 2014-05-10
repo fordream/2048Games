@@ -8,6 +8,8 @@
 
 #import "M2SettingsViewController.h"
 #import "M2SettingsDetailViewController.h"
+#import "MKStoreManager.h"
+#import "M2AppDelegate.h"
 
 @interface M2SettingsViewController ()
 
@@ -19,6 +21,9 @@
   NSArray *_options;
   NSArray *_optionSelections;
   NSArray *_optionsNotes;
+
+    //***
+    NSArray* _optionsShow;
 }
 
 
@@ -45,14 +50,15 @@
 - (void)commonInit
 {
   _options = @[@"Game Type", @"Board Size", @"Theme"];
+    _optionsShow = @[NSLocalizedString(@"Game Type", nil), NSLocalizedString(@"Board Size", nil), NSLocalizedString(@"Theme", nil)];
   
-  _optionSelections = @[@[@"Powers of 2", @"Powers of 3", @"Fibonacci"],
+  _optionSelections = @[@[ NSLocalizedString(@"Powers of 2",nil), NSLocalizedString(@"Powers of 3",nil), NSLocalizedString(@"Fibonacci",nil)],
                         @[@"3 x 3", @"4 x 4", @"5 x 5"],
-                        @[@"Default", @"Vibrant", @"Joyful"]];
+                        @[NSLocalizedString(@"Default",nil), NSLocalizedString(@"Vibrant",nil), NSLocalizedString(@"Joyful",nil)]];
   
-  _optionsNotes = @[@"For Fibonacci games, a tile can be joined with a tile that is one level above or below it, but not to one equal to it. For Powers of 3, you need 3 consecutive tiles to be the same to trigger a merge!",
-                    @"The smaller the board is, the harder! For 5 x 5 board, two tiles will be added every round if you are playing Powers of 2.",
-                    @"Choose your favorite appearance and get your own feeling of 2048! More (and higher quality) themes are in the works so check back regularly!"];
+  _optionsNotes = @[NSLocalizedString(@"For Fibonacci games, a tile can be joined with a tile that is one level above or below it, but not to one equal to it. For Powers of 3, you need 3 consecutive tiles to be the same to trigger a merge!",nil),
+                    NSLocalizedString(@"The smaller the board is, the harder! For 5 x 5 board, two tiles will be added every round if you are playing Powers of 2.",nil),
+                    NSLocalizedString(@"Choose your favorite appearance and get your own feeling of 2048! More (and higher quality) themes are in the works so check back regularly!",nil)];
 }
 
 
@@ -92,7 +98,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-  return 2;
+    NSInteger pRet;
+    if ([M2AppDelegate hadRemovedAds]) {
+        pRet = 1;
+    }else{
+        pRet = 2;
+    }
+    
+  return pRet;
 }
 
 
@@ -105,7 +118,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 {
   if (section) return @"";
-  return @"Please note: Changing the settings above would restart the game.";
+  return NSLocalizedString(@"Please note: Changing the settings above would restart the game.", nil) ;
 }
 
 
@@ -116,10 +129,12 @@
   if (indexPath.section) {
 //    cell.textLabel.text = @"About 2048";
 //    cell.detailTextLabel.text = @"";
-      cell.textLabel.text = @"Leaderboard";
+      cell.textLabel.text = NSLocalizedString(@"Remove Ads",nil);
       cell.detailTextLabel.text = @"";
   } else {
-    cell.textLabel.text = [_options objectAtIndex:indexPath.row];
+//    cell.textLabel.text = [_options objectAtIndex:indexPath.row];
+      //***
+      cell.textLabel.text = [_optionsShow objectAtIndex:indexPath.row];
     
     NSInteger index = [Settings integerForKey:[_options objectAtIndex:indexPath.row]];
     cell.detailTextLabel.text = [[_optionSelections objectAtIndex:indexPath.row] objectAtIndex:index];
@@ -135,6 +150,47 @@
   if (indexPath.section) {
 //    [self performSegueWithIdentifier:@"About Segue" sender:nil];
       //***show leaderboard
+      if([SKPaymentQueue canMakePayments] && ![M2AppDelegate hadRemovedAds]) {
+      
+          UIAlertView *alertConnect = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connecting to App Store...", nil)
+                                                          message:nil
+                                                         delegate:nil
+                                                cancelButtonTitle:nil
+                                                otherButtonTitles:nil];
+          [alertConnect show];
+
+          
+          SKProduct* product = [[MKStoreManager sharedManager].purchasableObjects objectAtIndex:0];
+          [[MKStoreManager sharedManager]
+           buyFeature:product.productIdentifier
+           onComplete:^(NSString* purchasedFeature, NSData*purchasedReceipt, NSArray* availableDownloads)
+           {
+               NSLog(@"Purchased: %@", purchasedFeature);
+               [alertConnect dismissWithClickedButtonIndex:0 animated:YES];
+               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Purchase Successful", nil)
+                                                               message:NSLocalizedString(@"Thank you. You have successfully remove all Ads",nil)
+                                                              delegate:nil
+                                                     cancelButtonTitle:NSLocalizedString(@"OK",nil)
+                                                     otherButtonTitles:nil];
+               [alert show];
+           }
+           onCancelled:^
+           {
+               [alertConnect dismissWithClickedButtonIndex:0 animated:YES];
+               NSLog(@"User Cancelled Transaction");
+               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Purchase Failed",nil)
+                                                               message:NSLocalizedString(@"Unfortunately you have cancelled your purchase of remove Ads. Please try again.",nil)
+                                                              delegate:nil
+                                                     cancelButtonTitle:NSLocalizedString(@"OK",nil)
+                                                     otherButtonTitles:nil];
+               [alert show];
+           }
+           ];
+
+          [alertConnect dismissWithClickedButtonIndex:0 animated:YES];
+      }
+      
+    
   } else {
     [self performSegueWithIdentifier:@"Settings Detail Segue" sender:nil];
   }

@@ -68,6 +68,8 @@
   [Settings setInteger:indexPath.row forKey:self.title];
   [self.tableView reloadData];
   GSTATE.needRefresh = YES;
+    NSLog(@"tap:%d,needfreesh:%d",indexPath.row,GSTATE.needRefresh);
+
 }
 
 @end
