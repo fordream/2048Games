@@ -92,7 +92,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-  return 1;
+  return 2;
 }
 
 
@@ -116,6 +116,8 @@
   if (indexPath.section) {
 //    cell.textLabel.text = @"About 2048";
 //    cell.detailTextLabel.text = @"";
+      cell.textLabel.text = @"Leaderboard";
+      cell.detailTextLabel.text = @"";
   } else {
     cell.textLabel.text = [_options objectAtIndex:indexPath.row];
     
@@ -131,7 +133,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   if (indexPath.section) {
-    [self performSegueWithIdentifier:@"About Segue" sender:nil];
+//    [self performSegueWithIdentifier:@"About Segue" sender:nil];
+      //***show leaderboard
   } else {
     [self performSegueWithIdentifier:@"Settings Detail Segue" sender:nil];
   }

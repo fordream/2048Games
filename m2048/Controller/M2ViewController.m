@@ -69,7 +69,7 @@
 	_adView.delegate = self;
 	_adView.hidden = YES;
     
-//	_adView.requiredContentSizeIdentifiers = [NSSet setWithObjects: ADBannerContentSizeIdentifierPortrait, ADBannerContentSizeIdentifierLandscape, nil];
+
 }
 
 
@@ -210,19 +210,34 @@
 }
 
 //***ADView
--(void)bannerViewWillLoadAd:(ADBannerView *)banner{NSLog(@"vill load");}
+-(void)bannerViewWillLoadAd:(ADBannerView *)banner{}
 -(void)bannerViewDidLoadAd:(ADBannerView *)banner{
-    NSLog(@"%d",_adView.bannerLoaded);
 	_adView.hidden = NO;
-	NSLog(@"did load");
 }
 -(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
-    NSLog(@"error:%@",error);
 }
 -(BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave{
-    NSLog(@"should begin");
 	return YES;
 }
 -(void)bannerViewActionDidFinish:(ADBannerView *)banner{NSLog(@"did finish");}
+
+//***gamecenter
++(void)showLeaderboard{
+//    if ([GameCenterManager isGameCenterAvailable]) {
+//        GKGameCenterViewController *gcController = [[GKGameCenterViewController alloc] init];
+//        if (gcController != NULL)
+//        {
+//            //            leaderboardController.category = self.currentLeaderBoard;
+//            gcController.viewState = GKGameCenterViewControllerStateLeaderboards;
+//            gcController.gameCenterDelegate = self;
+//        [self presentViewController:gcController animated:YES completion:nil];
+//        }
+//    }else{
+//    }
+}
+
+- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController NS_AVAILABLE_IOS(6_0){
+}
+
 
 @end

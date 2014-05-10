@@ -9,15 +9,19 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 #import <iAd/iAd.h>
+#import "GameCenterManager.h"
+#import <GameKit/GameKit.h>
 
-
-@interface M2ViewController : UIViewController<ADBannerViewDelegate>
+@interface M2ViewController : UIViewController<ADBannerViewDelegate,GKGameCenterControllerDelegate>
 
 @property (strong, nonatomic) ADBannerView *adView;
+@property (strong, nonatomic)GameCenterManager* gameCenterManager;
 
 
 - (void)updateScore:(NSInteger)score;
 
 - (void)endGame:(BOOL)won;
+
++(void)showLeaderboard;
 
 @end
