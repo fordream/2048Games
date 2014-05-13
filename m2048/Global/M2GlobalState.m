@@ -78,13 +78,32 @@
 }
 
 
+//- (NSInteger)tileSize
+//{
+//  if (self.dimension <= 4) {
+//    return 66;
+//  }
+//  return 56;
+//}
+
+//***for ipad
 - (NSInteger)tileSize
 {
-  if (self.dimension <= 4) {
-    return 66;
-  }
-  return 56;
+    NSInteger pRet = 56;
+    if (self.dimension <= 4) {
+        pRet = 66;
+    }
+    
+    if (DEVICE_IPAD) {
+        if (self.dimension <= 4) {
+            pRet = 66*2;
+        }
+        pRet = 56*2;
+    }
+    
+    return pRet;
 }
+
 
 
 - (NSInteger)horizontalOffset
@@ -97,11 +116,16 @@
 - (NSInteger)verticalOffset
 {
     CGFloat height = 0.0;
-    if ([UIScreen mainScreen].bounds.size.height == 480) {
-        height = self.dimension * (self.tileSize + self.borderWidth) + self.borderWidth + 62;
+    if (DEVICE_IPAD) {
+            height = self.dimension * (self.tileSize + self.borderWidth) + self.borderWidth + 200;
     }else{
-        height = self.dimension * (self.tileSize + self.borderWidth) + self.borderWidth + 80;
+        if ([UIScreen mainScreen].bounds.size.height == 480) {
+            height = self.dimension * (self.tileSize + self.borderWidth) + self.borderWidth + 62;
+        }else{
+            height = self.dimension * (self.tileSize + self.borderWidth) + self.borderWidth + 80;
+        }
     }
+
 
   return ([[UIScreen mainScreen] bounds].size.height - height) / 2;
 }

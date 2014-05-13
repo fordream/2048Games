@@ -48,7 +48,9 @@
   
   _overlay.hidden = YES;
   _overlayBackground.hidden = YES;
-  
+//bugbug
+    
+    
   // Configure the view.
   SKView * skView = (SKView *)self.view;
   
@@ -129,6 +131,32 @@ NSLog(@"viewc:%ld", [[MKStoreManager sharedManager].purchasableObjects count]);
   _overlay.message.textColor = [GSTATE buttonColor];
   [_overlay.keepPlaying setTitleColor:[GSTATE buttonColor] forState:UIControlStateNormal];
   [_overlay.restartGame setTitleColor:[GSTATE buttonColor] forState:UIControlStateNormal];
+    
+    if (DEVICE_IPAD) {
+        
+        _restartButton.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:14*2];
+        
+        _settingsButton.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:14*2];
+        
+        if (target > 100000) {
+            
+            _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:34*2];
+        } else if (target < 10000) {
+            _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:42*2];
+        } else {
+            _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:40*2];
+        }
+        
+        _subtitle.font = [UIFont fontWithName:[GSTATE regularFontName] size:14*2];
+        
+        _overlay.message.font = [UIFont fontWithName:[GSTATE boldFontName] size:36*2];
+        _overlay.keepPlaying.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17*2];
+        _overlay.restartGame.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17*2];
+        
+        _overlay.message.font = [UIFont fontWithName:[GSTATE boldFontName] size:36*2];
+        _overlay.keepPlaying.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17*2];
+        _overlay.restartGame.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17*2];
+    }
 }
 
 

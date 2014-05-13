@@ -216,6 +216,8 @@
 		E9413B541921357D007FABFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		E9413B561921357D007FABFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		E9413B581921357D007FABFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Main.strings; sourceTree = "<group>"; };
+		E976932E19226633006E3575 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "m2048/zh-Hans.lproj/Main_iPad.strings"; sourceTree = "<group>"; };
+		E976932F192267D8006E3575 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = m2048/en.lproj/Main_iPad.strings; sourceTree = "<group>"; };
 		E9F0EE6119225B9C00CA2B8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = m2048/Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -917,6 +919,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				E9F0EE6119225B9C00CA2B8A /* Base */,
+				E976932E19226633006E3575 /* zh-Hans */,
+				E976932F192267D8006E3575 /* en */,
 			);
 			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
