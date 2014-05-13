@@ -48,7 +48,7 @@
   
   _overlay.hidden = YES;
   _overlayBackground.hidden = YES;
-//bugbug
+
     
     
   // Configure the view.
@@ -67,10 +67,17 @@
   _scene.delegate = self;
     
     //ADView
-    CGRect rect = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 52, 0, 0);
+    
+    float adh = 52;
+    if (DEVICE_IPAD) {
+        adh = 72;
+    }
+    
+    CGRect rect = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - adh, 0, 0);
     _adView = [[ADBannerView alloc] initWithFrame:rect];
 	[skView addSubview:_adView];
 	_adView.delegate = self;
+    _adView.hidden = YES;//bugbug
 //    if ([[NSUserDefaults standardUserDefaults] objectForKey:AdsRemoved]) {
 //        _adView.hidden = YES;
 //    }
@@ -261,10 +268,11 @@ NSLog(@"viewc:%ld", [[MKStoreManager sharedManager].purchasableObjects count]);
 -(void)bannerViewWillLoadAd:(ADBannerView *)banner{
 }
 -(void)bannerViewDidLoadAd:(ADBannerView *)banner{
-	_adView.hidden = NO;
-    if ([self hadRemovedAds]) {
-        _adView.hidden = YES;
-    }
+//	_adView.hidden = NO;
+//    if ([self hadRemovedAds]) {
+//        _adView.hidden = YES;
+//    }
+    _adView.hidden = YES;
 }
 -(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
 }

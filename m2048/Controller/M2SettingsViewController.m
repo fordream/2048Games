@@ -190,6 +190,13 @@
            ];
 
           [alertConnect dismissWithClickedButtonIndex:0 animated:YES];
+      }else {
+          UIAlertView *alertConnect = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connecting to App Store failed!", nil)
+                                                                 message:NSLocalizedString(@"Please tray later!",nil)
+                                                                delegate:nil
+                                                       cancelButtonTitle:NSLocalizedString(@"OK",nil)
+                                                       otherButtonTitles:nil];
+          [alertConnect show];
       }
       
     
