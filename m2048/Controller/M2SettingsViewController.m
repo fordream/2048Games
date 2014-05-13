@@ -150,8 +150,9 @@
   if (indexPath.section) {
 //    [self performSegueWithIdentifier:@"About Segue" sender:nil];
       //***show leaderboard
-      if([SKPaymentQueue canMakePayments] && ![M2AppDelegate hadRemovedAds]) {
-      
+       NSLog(@"111:%ld",[[MKStoreManager sharedManager].purchasableObjects count]);
+      if([SKPaymentQueue canMakePayments] && ![M2AppDelegate hadRemovedAds] && [[MKStoreManager sharedManager].purchasableObjects count]) {
+       NSLog(@"222");
           UIAlertView *alertConnect = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connecting to App Store...", nil)
                                                           message:nil
                                                          delegate:nil
@@ -173,6 +174,7 @@
                                                      cancelButtonTitle:NSLocalizedString(@"OK",nil)
                                                      otherButtonTitles:nil];
                [alert show];
+               [[NSUserDefaults standardUserDefaults] setBool:YES forKey:AdsRemoved];
            }
            onCancelled:^
            {

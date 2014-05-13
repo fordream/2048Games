@@ -45,13 +45,13 @@ extern NSString *const kAppiraterDeclinedToRate;
 /*
  Place your Apple generated software id here.
  */
-//#ifdef DELUXE_VERSION
-//#define APPIRATER_APP_ID				615153294
-//#else
-//#define APPIRATER_APP_ID				597805001
-//#endif
-
+#ifdef DEVICE_IPAD
+#define APPIRATER_APP_ID				877615937
+#else
 #define APPIRATER_APP_ID				874335226
+#endif
+
+//#define APPIRATER_APP_ID				874335226
 
 
 /*

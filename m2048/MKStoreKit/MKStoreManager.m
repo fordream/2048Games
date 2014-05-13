@@ -202,9 +202,15 @@ static MKStoreManager* _sharedStoreManager;
 
 +(NSDictionary*) storeKitItems
 {
+    NSString *filename = @"MKStoreKitConfigs.plist";
+#ifdef DEVICE_IPAD
+    NSLog(@"DEVICE_IPAD");
+    filename = @"MKStoreKitConfigs_iPad.plist";
+#endif
+
   return [NSDictionary dictionaryWithContentsOfFile:
           [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:
-           @"MKStoreKitConfigs.plist"]];
+           filename]];
 }
 
 - (void) restorePreviousTransactionsOnComplete:(void (^)(void)) completionBlock

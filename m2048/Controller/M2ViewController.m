@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "M2ViewController.h"
 #import "M2SettingsViewController.h"
+#import "MKStoreManager.h"
+#import "M2AppDelegate.h"
 
 #import "M2Scene.h"
 #import "M2GameManager.h"
@@ -67,9 +69,27 @@
     _adView = [[ADBannerView alloc] initWithFrame:rect];
 	[skView addSubview:_adView];
 	_adView.delegate = self;
-	_adView.hidden = YES;
+//    if ([[NSUserDefaults standardUserDefaults] objectForKey:AdsRemoved]) {
+//        _adView.hidden = YES;
+//    }
+
     
 
+}
+
+-(BOOL)hadRemovedAds{
+    BOOL pRet = NO;
+NSLog(@"viewc:%ld", [[MKStoreManager sharedManager].purchasableObjects count]);
+    if ([SKPaymentQueue canMakePayments] && [[MKStoreManager sharedManager].purchasableObjects count]) {
+        SKProduct* product = [[MKStoreManager sharedManager].purchasableObjects objectAtIndex:0];
+        
+        if ([MKStoreManager isFeaturePurchased:product.productIdentifier]) {
+            pRet = YES;
+        }
+    }
+
+    
+    return pRet;
 }
 
 
@@ -210,9 +230,13 @@
 }
 
 //***ADView
--(void)bannerViewWillLoadAd:(ADBannerView *)banner{}
+-(void)bannerViewWillLoadAd:(ADBannerView *)banner{
+}
 -(void)bannerViewDidLoadAd:(ADBannerView *)banner{
 	_adView.hidden = NO;
+    if ([self hadRemovedAds]) {
+        _adView.hidden = YES;
+    }
 }
 -(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
 }
