@@ -99,12 +99,15 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     NSInteger pRet;
+#ifdef TAG_DELUXE
+    pRet = 1;
+#else
     if ([M2AppDelegate hadRemovedAds]) {
         pRet = 1;
     }else{
         pRet = 2;
     }
-    
+#endif
   return pRet;
 }
 
@@ -149,11 +152,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   if (indexPath.section) {
-//    [self performSegueWithIdentifier:@"About Segue" sender:nil];
-      //***show leaderboard
-       NSLog(@"111:%ld",[[MKStoreManager sharedManager].purchasableObjects count]);
       if([SKPaymentQueue canMakePayments] && ![M2AppDelegate hadRemovedAds] && [[MKStoreManager sharedManager].purchasableObjects count]) {
-       NSLog(@"222");
+
           UIAlertView *alertConnect = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connecting to App Store...", nil)
                                                           message:nil
                                                          delegate:nil

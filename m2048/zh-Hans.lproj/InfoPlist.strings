@@ -1,3 +1,5 @@
 /* Localized versions of Info.plist keys */
 
-CFBundleDisplayName ="2048－加强版 HD";
+//CFBundleDisplayName ="2048－加强版 HD";
+
+CFBundleDisplayName ="2048 豪华版HD";

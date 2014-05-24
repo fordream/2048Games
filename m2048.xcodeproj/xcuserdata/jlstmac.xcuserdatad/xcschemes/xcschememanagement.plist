@@ -4,10 +4,41 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>m2048 copy 2.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>m2048 copy.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+		<key>m2048-Deluxe.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>m2048-Deluxe_iPad.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>m2048-iPad copy.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>m2048-iPad.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>m2048.xcscheme</key>
 		<dict>
@@ -28,6 +59,16 @@
 			<true/>
 		</dict>
 		<key>E9413AEC19212709007FABFB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E954FAE319309C2E005E1275</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E954FB1B1930A5CA005E1275</key>
 		<dict>
 			<key>primary</key>
 			<true/>

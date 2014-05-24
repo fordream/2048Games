@@ -69,11 +69,6 @@
     //ADView
     [self loadAdView];
     
-    NSLog(@"hhhh:%f",[UIScreen mainScreen].bounds.size.height);
-    NSLog(@"wwww:%f",[UIScreen mainScreen].bounds.size.width);
-
-    
-
 }
 
 -(BOOL)hadRemovedAds{
@@ -257,6 +252,11 @@ NSLog(@"viewc:%ld", [[MKStoreManager sharedManager].purchasableObjects count]);
 }
 
 - (void)loadAdView{
+    
+#ifdef TAG_DELUXE
+    //nothing added in deluxe
+#else
+    
     float adh = 52;
 #ifdef DEVICE_IPAD
     adh = 71;
@@ -267,18 +267,24 @@ NSLog(@"viewc:%ld", [[MKStoreManager sharedManager].purchasableObjects count]);
 	[self.view addSubview:_adView];
     [_adView setDelegate:self];
     _adView.hidden = YES;
+#endif
 }
 
 //***ADView
 -(void)bannerViewWillLoadAd:(ADBannerView *)banner{
 }
 -(void)bannerViewDidLoadAd:(ADBannerView *)banner{
+#ifdef TAG_DELUXE
+#else
 	_adView.hidden = NO;
     if ([self hadRemovedAds]) {
         _adView.hidden = YES;
     }
+#endif
 }
 -(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
+#ifdef TAG_DELUXE
+#else
     NSLog(@"iad error:%@",error);
     _adView.hidden = YES;
     
@@ -286,7 +292,7 @@ NSLog(@"viewc:%ld", [[MKStoreManager sharedManager].purchasableObjects count]);
     [_adView removeFromSuperview];
     [self loadAdView];
     
-
+#endif
 }
 -(BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave{
 	return YES;

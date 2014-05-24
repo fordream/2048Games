@@ -17,8 +17,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+#ifdef TAG_DELUXE
+#else
     [MKStoreManager sharedManager];
-    
+#endif
 
     return YES;
 }
