@@ -130,6 +130,7 @@
 //    cell.textLabel.text = @"About 2048";
 //    cell.detailTextLabel.text = @"";
       cell.textLabel.text = NSLocalizedString(@"Remove Ads",nil);
+      
       cell.detailTextLabel.text = @"";
   } else {
 //    cell.textLabel.text = [_options objectAtIndex:indexPath.row];

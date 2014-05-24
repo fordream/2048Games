@@ -15,7 +15,6 @@
 		2443DC6418D662CA00C920C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2443DC6318D662CA00C920C1 /* main.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		2443DC6818D662CA00C920C1 /* M2AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2443DC6718D662CA00C920C1 /* M2AppDelegate.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		2443DC6B18D662CA00C920C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2443DC6918D662CA00C920C1 /* Main.storyboard */; };
-		2443DC7518D662CA00C920C1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2443DC7418D662CA00C920C1 /* Images.xcassets */; };
 		2443DC7C18D662CA00C920C1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2443DC7B18D662CA00C920C1 /* XCTest.framework */; };
 		2443DC7D18D662CA00C920C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2443DC5518D662CA00C920C1 /* Foundation.framework */; };
 		2443DC7E18D662CA00C920C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2443DC5918D662CA00C920C1 /* UIKit.framework */; };
@@ -93,7 +92,6 @@
 		E9413B1219212709007FABFB /* DBSetup.sql in Resources */ = {isa = PBXBuildFile; fileRef = E93AED91191E48FA001B2199 /* DBSetup.sql */; };
 		E9413B1319212709007FABFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2443DC6018D662CA00C920C1 /* InfoPlist.strings */; };
 		E9413B1419212709007FABFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2443DC7418D662CA00C920C1 /* Images.xcassets */; };
-		E9413B1519212709007FABFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2443DC6918D662CA00C920C1 /* Main.storyboard */; };
 		E9413B1619212709007FABFB /* MKStoreKitConfigs.plist in Resources */ = {isa = PBXBuildFile; fileRef = E93AED8B191E48FA001B2199 /* MKStoreKitConfigs.plist */; };
 		E9413B1719212709007FABFB /* AddDevice.html in Resources */ = {isa = PBXBuildFile; fileRef = E93AED90191E48FA001B2199 /* AddDevice.html */; };
 		E9413B1819212709007FABFB /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = E93AEDB4191E8502001B2199 /* Main.strings */; };
@@ -109,6 +107,9 @@
 		E9413B591921357D007FABFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9413B531921357D007FABFB /* InfoPlist.strings */; };
 		E9413B5A1921357D007FABFB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9413B551921357D007FABFB /* Localizable.strings */; };
 		E9413B5B1921357D007FABFB /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9413B571921357D007FABFB /* Main.strings */; };
+		E97984F0192E3BF80024EFAA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2443DC7418D662CA00C920C1 /* Images.xcassets */; };
+		E9DD371E192A42D5002332FB /* iAdsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DD371C192A42D5002332FB /* iAdsDemoViewController.m */; };
+		E9DD371F192A42D5002332FB /* iAdsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DD371C192A42D5002332FB /* iAdsDemoViewController.m */; };
 		E9F0EE6219225B9C00CA2B8A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F0EE6019225B9C00CA2B8A /* Main_iPad.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -218,6 +219,12 @@
 		E9413B581921357D007FABFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Main.strings; sourceTree = "<group>"; };
 		E976932E19226633006E3575 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "m2048/zh-Hans.lproj/Main_iPad.strings"; sourceTree = "<group>"; };
 		E976932F192267D8006E3575 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = m2048/en.lproj/Main_iPad.strings; sourceTree = "<group>"; };
+		E97984EB192CE8F50024EFAA /* icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-120.png"; path = "m2048/Images.xcassets/AppIcon-2.appiconset/icon-120.png"; sourceTree = "<group>"; };
+		E97984EC192CE90A0024EFAA /* icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-80.png"; path = "m2048/Images.xcassets/AppIcon-2.appiconset/icon-80.png"; sourceTree = "<group>"; };
+		E97984ED192CE91E0024EFAA /* icon-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-58.png"; path = "m2048/Images.xcassets/AppIcon-2.appiconset/icon-58.png"; sourceTree = "<group>"; };
+		E9DD371B192A42D5002332FB /* iAdDemo_AppStoreSafe_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAdDemo_AppStoreSafe_Prefix.pch; sourceTree = "<group>"; };
+		E9DD371C192A42D5002332FB /* iAdsDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iAdsDemoViewController.m; sourceTree = "<group>"; };
+		E9DD371D192A42D5002332FB /* iAdsDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAdsDemoViewController.h; sourceTree = "<group>"; };
 		E9F0EE6119225B9C00CA2B8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = m2048/Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -266,6 +273,10 @@
 		2443DC4918D662CA00C920C1 = {
 			isa = PBXGroup;
 			children = (
+				E97984ED192CE91E0024EFAA /* icon-58.png */,
+				E97984EC192CE90A0024EFAA /* icon-80.png */,
+				E97984EB192CE8F50024EFAA /* icon-120.png */,
+				E9DD371A192A42C2002332FB /* iAd */,
 				E9413B3519212FFF007FABFB /* m2048-iPad.entitlements */,
 				E9413B231921270A007FABFB /* Resources-iPad */,
 				2443DC5D18D662CA00C920C1 /* m2048 */,
@@ -535,6 +546,16 @@
 			name = en.lproj;
 			sourceTree = "<group>";
 		};
+		E9DD371A192A42C2002332FB /* iAd */ = {
+			isa = PBXGroup;
+			children = (
+				E9DD371B192A42D5002332FB /* iAdDemo_AppStoreSafe_Prefix.pch */,
+				E9DD371C192A42D5002332FB /* iAdsDemoViewController.m */,
+				E9DD371D192A42D5002332FB /* iAdsDemoViewController.h */,
+			);
+			name = iAd;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -604,7 +625,7 @@
 						DevelopmentTeam = E8TB3WBKTR;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.iCloud = {
 								enabled = 1;
@@ -654,11 +675,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E93AEDA0191E48FB001B2199 /* featureCheck.php in Resources */,
+				E97984F0192E3BF80024EFAA /* Images.xcassets in Resources */,
 				E93AEDB6191E8502001B2199 /* InfoPlist.strings in Resources */,
 				E93AEDAD191E84EE001B2199 /* Localizable.strings in Resources */,
 				E93AED9F191E48FB001B2199 /* DBSetup.sql in Resources */,
 				2443DC6218D662CA00C920C1 /* InfoPlist.strings in Resources */,
-				2443DC7518D662CA00C920C1 /* Images.xcassets in Resources */,
 				2443DC6B18D662CA00C920C1 /* Main.storyboard in Resources */,
 				E93AED9B191E48FB001B2199 /* MKStoreKitConfigs.plist in Resources */,
 				E93AED9E191E48FB001B2199 /* AddDevice.html in Resources */,
@@ -696,7 +717,6 @@
 				E9413B5019213540007FABFB /* Main.strings in Resources */,
 				E9413B591921357D007FABFB /* InfoPlist.strings in Resources */,
 				E9413B5A1921357D007FABFB /* Localizable.strings in Resources */,
-				E9413B1519212709007FABFB /* Main.storyboard in Resources */,
 				E9413B1619212709007FABFB /* MKStoreKitConfigs.plist in Resources */,
 				E9413B1719212709007FABFB /* AddDevice.html in Resources */,
 				E9413B1819212709007FABFB /* Main.strings in Resources */,
@@ -732,6 +752,7 @@
 				E93AEDA3191E48FB001B2199 /* VerificationController.m in Sources */,
 				24C4516418DABABE0001FCFD /* M2GlobalState.m in Sources */,
 				E93AED98191E48FA001B2199 /* SFHFKeychainUtils.m in Sources */,
+				E9DD371E192A42D5002332FB /* iAdsDemoViewController.m in Sources */,
 				2443DC6818D662CA00C920C1 /* M2AppDelegate.m in Sources */,
 				E93AED3C191D264B001B2199 /* Appirater.m in Sources */,
 				E93AED9C191E48FB001B2199 /* MKStoreManager.m in Sources */,
@@ -770,6 +791,7 @@
 				E9413AFB19212709007FABFB /* VerificationController.m in Sources */,
 				E9413AFC19212709007FABFB /* M2GlobalState.m in Sources */,
 				E9413AFD19212709007FABFB /* SFHFKeychainUtils.m in Sources */,
+				E9DD371F192A42D5002332FB /* iAdsDemoViewController.m in Sources */,
 				E9413AFE19212709007FABFB /* M2AppDelegate.m in Sources */,
 				E9413AFF19212709007FABFB /* Appirater.m in Sources */,
 				E9413B0019212709007FABFB /* MKStoreManager.m in Sources */,
@@ -1004,7 +1026,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = m2048/m2048.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jiang LinShan (E8TB3WBKTR)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jiang LinShan (E8TB3WBKTR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1012,7 +1034,7 @@
 				INFOPLIST_FILE = "m2048/m2048-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "CEF68D01-3704-4D72-9B4F-14D0BC49C144";
+				PROVISIONING_PROFILE = "DA0C0D10-DC37-4B44-A40B-69EA865F5948";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -1025,7 +1047,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = m2048/m2048.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jiang LinShan (E8TB3WBKTR)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jiang LinShan (E8TB3WBKTR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1033,7 +1055,7 @@
 				INFOPLIST_FILE = "m2048/m2048-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "CEF68D01-3704-4D72-9B4F-14D0BC49C144";
+				PROVISIONING_PROFILE = "DA0C0D10-DC37-4B44-A40B-69EA865F5948";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -1083,12 +1105,12 @@
 		E9413B2019212709007FABFB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_iPad;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-ipad";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_ENTITLEMENTS = "m2048-iPad.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jiang LinShan (453PQT5LKA)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jiang LinShan (453PQT5LKA)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jiang LinShan (E8TB3WBKTR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jiang LinShan (E8TB3WBKTR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "m2048/m2048-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1097,9 +1119,9 @@
 					DEVICE_IPAD,
 				);
 				INFOPLIST_FILE = "m2048 copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "m2048-iPad";
-				PROVISIONING_PROFILE = "7FE2D299-02C6-46B4-BCA5-76EC7E5256D7";
+				PROVISIONING_PROFILE = "DC823B67-10A1-479E-9ADE-4E585286C495";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
@@ -1109,19 +1131,19 @@
 		E9413B2119212709007FABFB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_iPad;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-ipad";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_ENTITLEMENTS = "m2048-iPad.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jiang LinShan (453PQT5LKA)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jiang LinShan (453PQT5LKA)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jiang LinShan (E8TB3WBKTR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jiang LinShan (E8TB3WBKTR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "m2048/m2048-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = DEVICE_IPAD;
 				INFOPLIST_FILE = "m2048 copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "m2048-iPad";
-				PROVISIONING_PROFILE = "7FE2D299-02C6-46B4-BCA5-76EC7E5256D7";
+				PROVISIONING_PROFILE = "DC823B67-10A1-479E-9ADE-4E585286C495";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;

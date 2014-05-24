@@ -42,10 +42,11 @@
   self.title.font = [UIFont fontWithName:[GSTATE boldFontName] size:12];
   self.score.font = [UIFont fontWithName:[GSTATE regularFontName] size:16];
     
-    if (DEVICE_IPAD) {
-        self.title.font = [UIFont fontWithName:[GSTATE boldFontName] size:12*2];
-        self.score.font = [UIFont fontWithName:[GSTATE regularFontName] size:16*2];
-    }
+#ifdef DEVICE_IPAD
+    self.title.font = [UIFont fontWithName:[GSTATE boldFontName] size:12*2];
+    self.score.font = [UIFont fontWithName:[GSTATE regularFontName] size:16*2];
+#endif
+
 }
 
 /*

@@ -67,20 +67,10 @@
   _scene.delegate = self;
     
     //ADView
+    [self loadAdView];
     
-    float adh = 52;
-    if (DEVICE_IPAD) {
-        adh = 72;
-    }
-    
-    CGRect rect = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - adh, 0, 0);
-    _adView = [[ADBannerView alloc] initWithFrame:rect];
-	[skView addSubview:_adView];
-	_adView.delegate = self;
-    _adView.hidden = YES;//bugbug
-//    if ([[NSUserDefaults standardUserDefaults] objectForKey:AdsRemoved]) {
-//        _adView.hidden = YES;
-//    }
+    NSLog(@"hhhh:%f",[UIScreen mainScreen].bounds.size.height);
+    NSLog(@"wwww:%f",[UIScreen mainScreen].bounds.size.width);
 
     
 
@@ -139,7 +129,8 @@ NSLog(@"viewc:%ld", [[MKStoreManager sharedManager].purchasableObjects count]);
   [_overlay.keepPlaying setTitleColor:[GSTATE buttonColor] forState:UIControlStateNormal];
   [_overlay.restartGame setTitleColor:[GSTATE buttonColor] forState:UIControlStateNormal];
     
-    if (DEVICE_IPAD) {
+//    if (DEVICE_IPAD) {
+#ifdef DEVICE_IPAD
         
         _restartButton.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:14*2];
         
@@ -163,7 +154,8 @@ NSLog(@"viewc:%ld", [[MKStoreManager sharedManager].purchasableObjects count]);
         _overlay.message.font = [UIFont fontWithName:[GSTATE boldFontName] size:36*2];
         _overlay.keepPlaying.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17*2];
         _overlay.restartGame.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17*2];
-    }
+//    }
+#endif
 }
 
 
@@ -264,17 +256,37 @@ NSLog(@"viewc:%ld", [[MKStoreManager sharedManager].purchasableObjects count]);
   // Release any cached data, images, etc that aren't in use.
 }
 
+- (void)loadAdView{
+    float adh = 52;
+#ifdef DEVICE_IPAD
+    adh = 71;
+#endif
+    
+    CGRect rect = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - adh, 0, 0);
+    _adView = [[ADBannerView alloc] initWithFrame:rect];
+	[self.view addSubview:_adView];
+    [_adView setDelegate:self];
+    _adView.hidden = YES;
+}
+
 //***ADView
 -(void)bannerViewWillLoadAd:(ADBannerView *)banner{
 }
 -(void)bannerViewDidLoadAd:(ADBannerView *)banner{
-//	_adView.hidden = NO;
-//    if ([self hadRemovedAds]) {
-//        _adView.hidden = YES;
-//    }
-    _adView.hidden = YES;
+	_adView.hidden = NO;
+    if ([self hadRemovedAds]) {
+        _adView.hidden = YES;
+    }
 }
 -(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
+    NSLog(@"iad error:%@",error);
+    _adView.hidden = YES;
+    
+    //remove this view and add again
+    [_adView removeFromSuperview];
+    [self loadAdView];
+    
+
 }
 -(BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave{
 	return YES;

@@ -94,12 +94,12 @@
         pRet = 66;
     }
     
-    if (DEVICE_IPAD) {
+#ifdef DEVICE_IPAD
         if (self.dimension <= 4) {
             pRet = 66*2;
         }
         pRet = 56*2;
-    }
+#endif
     
     return pRet;
 }
@@ -116,15 +116,25 @@
 - (NSInteger)verticalOffset
 {
     CGFloat height = 0.0;
-    if (DEVICE_IPAD) {
-            height = self.dimension * (self.tileSize + self.borderWidth) + self.borderWidth + 200;
+//    if (DEVICE_IPAD) {
+//            height = self.dimension * (self.tileSize + self.borderWidth) + self.borderWidth + 200;
+//    }else{
+//        if ([UIScreen mainScreen].bounds.size.height == 480) {
+//            height = self.dimension * (self.tileSize + self.borderWidth) + self.borderWidth + 62;
+//        }else{
+//            height = self.dimension * (self.tileSize + self.borderWidth) + self.borderWidth + 80;
+//        }
+//    }
+    
+#ifdef DEVICE_IPAD
+    height = self.dimension * (self.tileSize + self.borderWidth) + self.borderWidth + 200;
+#else
+    if ([UIScreen mainScreen].bounds.size.height == 480) {
+        height = self.dimension * (self.tileSize + self.borderWidth) + self.borderWidth + 62;
     }else{
-        if ([UIScreen mainScreen].bounds.size.height == 480) {
-            height = self.dimension * (self.tileSize + self.borderWidth) + self.borderWidth + 62;
-        }else{
-            height = self.dimension * (self.tileSize + self.borderWidth) + self.borderWidth + 80;
-        }
+        height = self.dimension * (self.tileSize + self.borderWidth) + self.borderWidth + 80;
     }
+#endif
 
 
   return ([[UIScreen mainScreen] bounds].size.height - height) / 2;

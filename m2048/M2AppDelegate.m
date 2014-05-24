@@ -12,9 +12,13 @@
 
 @implementation M2AppDelegate
 
+@synthesize window;
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [MKStoreManager sharedManager];
+    
 
     return YES;
 }
@@ -52,7 +56,6 @@
 
 +(BOOL)hadRemovedAds{
     BOOL pRet = NO;
-    NSLog(@"apppdelegate:%ld", [[MKStoreManager sharedManager].purchasableObjects count]);
     if ([SKPaymentQueue canMakePayments] && [[MKStoreManager sharedManager].purchasableObjects count]) {
         SKProduct* product = [[MKStoreManager sharedManager].purchasableObjects objectAtIndex:0];
         

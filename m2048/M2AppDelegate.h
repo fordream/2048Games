@@ -10,7 +10,10 @@
 #define AdsRemoved @"AdsRemoved"
 
 
+
 @interface M2AppDelegate : UIResponder <UIApplicationDelegate>
+{
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
