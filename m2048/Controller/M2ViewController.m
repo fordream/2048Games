@@ -67,8 +67,10 @@
   _scene.delegate = self;
     
     //ADView
+#ifdef TAG_IPAD
+#else
     [self loadAdView];
-    
+#endif
 }
 
 -(BOOL)hadRemovedAds{
@@ -285,11 +287,13 @@ NSLog(@"viewc:%ld", [[MKStoreManager sharedManager].purchasableObjects count]);
 -(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
 #ifdef TAG_DELUXE
 #else
-    NSLog(@"iad error:%@",error);
+//    NSLog(@"iad error:%@",error);
     _adView.hidden = YES;
     
     //remove this view and add again
+    [_adView setDelegate:NULL];
     [_adView removeFromSuperview];
+
     [self loadAdView];
     
 #endif

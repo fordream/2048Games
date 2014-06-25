@@ -47,6 +47,10 @@ extern NSString *const kAppiraterDeclinedToRate;
  */
 #ifdef DEVICE_IPAD
 #define APPIRATER_APP_ID				877615937
+#elif TAG_DEL_IPHONE
+#define APPIRATER_APP_ID				882184504
+#elif TAG_DEL_IPAD
+#define APPIRATER_APP_ID				882191061
 #else
 #define APPIRATER_APP_ID				874335226
 #endif
@@ -89,13 +93,13 @@ extern NSString *const kAppiraterDeclinedToRate;
  Users will need to have the same version of your app installed for this many
  days before they will be prompted to rate it.
  */
-#define DAYS_UNTIL_PROMPT				1		// double
+#define DAYS_UNTIL_PROMPT				0.5		// double
 
 /*
  Users will need to launch the same version of the app this many times before
  they will be prompted to rate it.
  */
-#define LAUNCHES_UNTIL_PROMPT			3		// integer
+#define LAUNCHES_UNTIL_PROMPT			1		// integer
 
 /*
  'YES' will show the Appirater alert everytime. Useful for testing how your message

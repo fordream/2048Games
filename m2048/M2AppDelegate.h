@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #define AdsRemoved @"AdsRemoved"
-
+#import <AVFoundation/AVFoundation.h>
 
 
 @interface M2AppDelegate : UIResponder <UIApplicationDelegate>
 {
+    AVAudioPlayer* player;
 }
 
 @property (strong, nonatomic) UIWindow *window;

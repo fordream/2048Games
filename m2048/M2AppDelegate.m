@@ -46,9 +46,9 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
   // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:AdsRemoved]) {
+//    if ([[NSUserDefaults standardUserDefaults] objectForKey:AdsRemoved]) {
         [Appirater appLaunched];
-    }
+//    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -58,11 +58,17 @@
 
 +(BOOL)hadRemovedAds{
     BOOL pRet = NO;
+    
+    if ([SKPaymentQueue canMakePayments]) {
+        NSLog(@"sss");
+    }
+    NSLog(@"ccc:%d",[[MKStoreManager sharedManager].purchasableObjects count]);
     if ([SKPaymentQueue canMakePayments] && [[MKStoreManager sharedManager].purchasableObjects count]) {
         SKProduct* product = [[MKStoreManager sharedManager].purchasableObjects objectAtIndex:0];
         
         if ([MKStoreManager isFeaturePurchased:product.productIdentifier]) {
-            pRet = YES;
+            pRet = NO;
+            NSLog(@"333");
         }
     }
 

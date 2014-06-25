@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <SpriteKit/SpriteKit.h>
+#import <AudioToolbox/AudioToolbox.h>
+#import "M2PianoEffect.h"
 
 @class M2Scene;
 @class M2Grid;
@@ -18,8 +21,12 @@ typedef NS_ENUM(NSInteger, M2Direction) {
   M2DirectionRight
 };
 
-@interface M2GameManager : NSObject
 
+
+@interface M2GameManager : NSObject{
+
+    M2PianoEffect* _pianoEffect;
+}
 /**
  * Starts a new session with the provided scene.
  *

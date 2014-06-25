@@ -103,8 +103,10 @@
     pRet = 1;
 #else
     if ([M2AppDelegate hadRemovedAds]) {
+        NSLog(@"111");
         pRet = 1;
     }else{
+        NSLog(@"222");
         pRet = 2;
     }
 #endif
@@ -114,7 +116,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  return section ? 1 : _options.count;
+//  return section ? 1 : _options.count;
+    return section ? 2 : _options.count;
+
 }
 
 
@@ -129,12 +133,19 @@
 {
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Settings Cell"];
   
-  if (indexPath.section) {
+  if (indexPath.section == 1) {
 //    cell.textLabel.text = @"About 2048";
 //    cell.detailTextLabel.text = @"";
-      cell.textLabel.text = NSLocalizedString(@"Remove Ads",nil);
-      
-      cell.detailTextLabel.text = @"";
+      if (indexPath.row == 0) {
+          cell.textLabel.text = NSLocalizedString(@"Remove Ads",nil);
+          
+          cell.detailTextLabel.text = @"";
+      }else if(indexPath.row == 1){
+          cell.textLabel.text = NSLocalizedString(@"Restore Your Purchase!",nil);
+          
+          cell.detailTextLabel.text = @"";
+      }
+
   } else {
 //    cell.textLabel.text = [_options objectAtIndex:indexPath.row];
       //***
@@ -151,47 +162,54 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  if (indexPath.section) {
-      if([SKPaymentQueue canMakePayments] && ![M2AppDelegate hadRemovedAds] && [[MKStoreManager sharedManager].purchasableObjects count]) {
-
-          UIAlertView *alertConnect = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connecting to App Store...", nil)
-                                                          message:nil
-                                                         delegate:nil
-                                                cancelButtonTitle:nil
-                                                otherButtonTitles:nil];
-          [alertConnect show];
-
-          
-          SKProduct* product = [[MKStoreManager sharedManager].purchasableObjects objectAtIndex:0];
-          [[MKStoreManager sharedManager]
-           buyFeature:product.productIdentifier
-           onComplete:^(NSString* purchasedFeature, NSData*purchasedReceipt, NSArray* availableDownloads)
-           {
-               NSLog(@"Purchased: %@", purchasedFeature);
-               [alertConnect dismissWithClickedButtonIndex:0 animated:YES];
-               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Purchase Successful", nil)
-                                                               message:NSLocalizedString(@"Thank you. You have successfully remove all Ads",nil)
-                                                              delegate:nil
-                                                     cancelButtonTitle:NSLocalizedString(@"OK",nil)
-                                                     otherButtonTitles:nil];
-               [alert show];
-               [[NSUserDefaults standardUserDefaults] setBool:YES forKey:AdsRemoved];
-           }
-           onCancelled:^
-           {
-               [alertConnect dismissWithClickedButtonIndex:0 animated:YES];
-               NSLog(@"User Cancelled Transaction");
-               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Purchase Failed",nil)
-                                                               message:NSLocalizedString(@"Unfortunately you have cancelled your purchase of remove Ads. Please try again.",nil)
-                                                              delegate:nil
-                                                     cancelButtonTitle:NSLocalizedString(@"OK",nil)
-                                                     otherButtonTitles:nil];
-               [alert show];
-           }
-           ];
-
-          [alertConnect dismissWithClickedButtonIndex:0 animated:YES];
-      }else {
+//    NSLog(@"section%d,index%d",indexPath.section,indexPath.row);
+  if (indexPath.section == 1) {
+      
+      if (indexPath.row == 0) {
+          if([SKPaymentQueue canMakePayments] && ![M2AppDelegate hadRemovedAds] && [[MKStoreManager sharedManager].purchasableObjects count]) {
+              
+              UIAlertView *alertConnect = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connecting to App Store...", nil)
+                                                                     message:nil
+                                                                    delegate:nil
+                                                           cancelButtonTitle:nil
+                                                           otherButtonTitles:nil];
+              [alertConnect show];
+              
+              
+              SKProduct* product = [[MKStoreManager sharedManager].purchasableObjects objectAtIndex:0];
+              [[MKStoreManager sharedManager]
+               buyFeature:product.productIdentifier
+               onComplete:^(NSString* purchasedFeature, NSData*purchasedReceipt, NSArray* availableDownloads)
+               {
+                   NSLog(@"Purchased: %@", purchasedFeature);
+                   [alertConnect dismissWithClickedButtonIndex:0 animated:YES];
+                   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Purchase Successful", nil)
+                                                                   message:NSLocalizedString(@"Thank you. You have successfully remove all Ads",nil)
+                                                                  delegate:nil
+                                                         cancelButtonTitle:NSLocalizedString(@"OK",nil)
+                                                         otherButtonTitles:nil];
+                   [alert show];
+                   [[NSUserDefaults standardUserDefaults] setBool:YES forKey:AdsRemoved];
+               }
+               onCancelled:^
+               {
+                   [alertConnect dismissWithClickedButtonIndex:0 animated:YES];
+                   NSLog(@"User Cancelled Transaction");
+                   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Purchase Failed",nil)
+                                                                   message:NSLocalizedString(@"Unfortunately you have cancelled your purchase of remove Ads. Please try again.",nil)
+                                                                  delegate:nil
+                                                         cancelButtonTitle:NSLocalizedString(@"OK",nil)
+                                                         otherButtonTitles:nil];
+                   [alert show];
+               }
+               ];
+              
+              [alertConnect dismissWithClickedButtonIndex:0 animated:YES];
+          }else{
+            [[MKStoreManager sharedManager]restorePreviousTransactionsOnComplete:^{NSLog(@"RESTORED PREVIOUS PURCHASE");} onError:nil];
+          }
+      
+      }else if(indexPath.row == 1){
           UIAlertView *alertConnect = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connecting to App Store failed!", nil)
                                                                  message:NSLocalizedString(@"Please tray later!",nil)
                                                                 delegate:nil

@@ -49,6 +49,12 @@ BOOL iterate(NSInteger value, BOOL countUp, NSInteger upper, NSInteger lower) {
 
 # pragma mark - Setup
 
+-(id)init{
+
+   _pianoEffect = [[M2PianoEffect alloc] init];
+    return [super init];
+}
+
 - (void)startNewSessionWithScene:(M2Scene *)scene
 {
   if (_grid && _grid.dimension == GSTATE.dimension) {
@@ -76,6 +82,15 @@ BOOL iterate(NSInteger value, BOOL countUp, NSInteger upper, NSInteger lower) {
 
 - (void)moveToDirection:(M2Direction)direction
 {
+
+//    [self playSound:[NSString stringWithFormat:@"/sound%d.mp3",iris[soundID]]];
+//    
+//    if (soundID < sizeof(iris)/sizeof(int)) {
+//        soundID++;
+//    }else{
+//        soundID = 0;
+//    }
+
   __block M2Tile *tile = nil;
   
   // Remember that the coordinate system of SpriteKit is the reverse of that of UIKit.
@@ -168,6 +183,12 @@ BOOL iterate(NSInteger value, BOOL countUp, NSInteger upper, NSInteger lower) {
   // Cannot move to the given direction. Abort.
   if (!_pendingScore) return;
   
+    //play pino effect
+    [_pianoEffect playEffect];
+    
+    //play pino effect
+    
+    
   // Commit tile movements.
   [_grid forEach:^(M2Position position) {
     M2Tile *tile = [_grid tileAtPosition:position];
@@ -196,6 +217,9 @@ BOOL iterate(NSInteger value, BOOL countUp, NSInteger upper, NSInteger lower) {
   if (![self movesAvailable]) {
     [_grid.scene.delegate endGame:NO];
   }
+    
+//    [tile runAction:effect];
+
 }
 
 
