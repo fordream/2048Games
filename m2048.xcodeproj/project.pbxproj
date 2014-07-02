@@ -33,34 +33,6 @@
 		24C4517018DFF10B0001FCFD /* M2ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4516F18DFF10B0001FCFD /* M2ScoreView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		24C4517318E140AE0001FCFD /* M2SettingsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4517218E140AE0001FCFD /* M2SettingsDetailViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		24C4518118E265390001FCFD /* M2Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4518018E265390001FCFD /* M2Overlay.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		E9336A541959C9EB00F34D15 /* 001.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A4D1959C9EB00F34D15 /* 001.mp3 */; };
-		E9336A551959C9EB00F34D15 /* 001.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A4D1959C9EB00F34D15 /* 001.mp3 */; };
-		E9336A561959C9EB00F34D15 /* 001.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A4D1959C9EB00F34D15 /* 001.mp3 */; };
-		E9336A571959C9EB00F34D15 /* 001.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A4D1959C9EB00F34D15 /* 001.mp3 */; };
-		E9336A581959C9EB00F34D15 /* 002.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A4E1959C9EB00F34D15 /* 002.mp3 */; };
-		E9336A591959C9EB00F34D15 /* 002.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A4E1959C9EB00F34D15 /* 002.mp3 */; };
-		E9336A5A1959C9EB00F34D15 /* 002.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A4E1959C9EB00F34D15 /* 002.mp3 */; };
-		E9336A5B1959C9EB00F34D15 /* 002.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A4E1959C9EB00F34D15 /* 002.mp3 */; };
-		E9336A5C1959C9EB00F34D15 /* 003.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A4F1959C9EB00F34D15 /* 003.mp3 */; };
-		E9336A5D1959C9EB00F34D15 /* 003.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A4F1959C9EB00F34D15 /* 003.mp3 */; };
-		E9336A5E1959C9EB00F34D15 /* 003.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A4F1959C9EB00F34D15 /* 003.mp3 */; };
-		E9336A5F1959C9EB00F34D15 /* 003.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A4F1959C9EB00F34D15 /* 003.mp3 */; };
-		E9336A601959C9EB00F34D15 /* 004.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A501959C9EB00F34D15 /* 004.mp3 */; };
-		E9336A611959C9EB00F34D15 /* 004.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A501959C9EB00F34D15 /* 004.mp3 */; };
-		E9336A621959C9EB00F34D15 /* 004.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A501959C9EB00F34D15 /* 004.mp3 */; };
-		E9336A631959C9EB00F34D15 /* 004.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A501959C9EB00F34D15 /* 004.mp3 */; };
-		E9336A641959C9EB00F34D15 /* 005.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A511959C9EB00F34D15 /* 005.mp3 */; };
-		E9336A651959C9EB00F34D15 /* 005.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A511959C9EB00F34D15 /* 005.mp3 */; };
-		E9336A661959C9EB00F34D15 /* 005.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A511959C9EB00F34D15 /* 005.mp3 */; };
-		E9336A671959C9EB00F34D15 /* 005.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A511959C9EB00F34D15 /* 005.mp3 */; };
-		E9336A681959C9EB00F34D15 /* 006.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A521959C9EB00F34D15 /* 006.mp3 */; };
-		E9336A691959C9EB00F34D15 /* 006.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A521959C9EB00F34D15 /* 006.mp3 */; };
-		E9336A6A1959C9EB00F34D15 /* 006.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A521959C9EB00F34D15 /* 006.mp3 */; };
-		E9336A6B1959C9EB00F34D15 /* 006.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A521959C9EB00F34D15 /* 006.mp3 */; };
-		E9336A6C1959C9EB00F34D15 /* 007.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A531959C9EB00F34D15 /* 007.mp3 */; };
-		E9336A6D1959C9EB00F34D15 /* 007.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A531959C9EB00F34D15 /* 007.mp3 */; };
-		E9336A6E1959C9EB00F34D15 /* 007.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A531959C9EB00F34D15 /* 007.mp3 */; };
-		E9336A6F1959C9EB00F34D15 /* 007.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9336A531959C9EB00F34D15 /* 007.mp3 */; };
 		E93AED3C191D264B001B2199 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = E93AED3B191D264B001B2199 /* Appirater.m */; };
 		E93AED3E191D277E001B2199 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93AED3D191D277E001B2199 /* SystemConfiguration.framework */; };
 		E93AED42191D280D001B2199 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93AED41191D280D001B2199 /* CFNetwork.framework */; };
@@ -348,6 +320,12 @@
 		E9C066A6195B0F2F00F6D8A7 /* Effect.txt in Resources */ = {isa = PBXBuildFile; fileRef = E9C066A4195B0F2F00F6D8A7 /* Effect.txt */; };
 		E9C066A7195B0F2F00F6D8A7 /* Effect.txt in Resources */ = {isa = PBXBuildFile; fileRef = E9C066A4195B0F2F00F6D8A7 /* Effect.txt */; };
 		E9C066A8195B0F2F00F6D8A7 /* Effect.txt in Resources */ = {isa = PBXBuildFile; fileRef = E9C066A4195B0F2F00F6D8A7 /* Effect.txt */; };
+		E9C066B3195B2D8B00F6D8A7 /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9413B4C19213540007FABFB /* Main.strings */; };
+		E9C066B4195B2D8C00F6D8A7 /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9413B4C19213540007FABFB /* Main.strings */; };
+		E9C066B5195B2DD600F6D8A7 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F0EE6019225B9C00CA2B8A /* Main_iPad.storyboard */; };
+		E9C066B6195B2DD700F6D8A7 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F0EE6019225B9C00CA2B8A /* Main_iPad.storyboard */; };
+		E9C066B7195B2DF700F6D8A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9413B4A19213540007FABFB /* Localizable.strings */; };
+		E9C066B8195B2DF800F6D8A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9413B4A19213540007FABFB /* Localizable.strings */; };
 		E9DD371E192A42D5002332FB /* iAdsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DD371C192A42D5002332FB /* iAdsDemoViewController.m */; };
 		E9DD371F192A42D5002332FB /* iAdsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DD371C192A42D5002332FB /* iAdsDemoViewController.m */; };
 		E9F0EE6219225B9C00CA2B8A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F0EE6019225B9C00CA2B8A /* Main_iPad.storyboard */; };
@@ -409,13 +387,6 @@
 		24C4517218E140AE0001FCFD /* M2SettingsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2SettingsDetailViewController.m; sourceTree = "<group>"; };
 		24C4517F18E265390001FCFD /* M2Overlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2Overlay.h; sourceTree = "<group>"; };
 		24C4518018E265390001FCFD /* M2Overlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2Overlay.m; sourceTree = "<group>"; };
-		E9336A4D1959C9EB00F34D15 /* 001.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 001.mp3; sourceTree = "<group>"; };
-		E9336A4E1959C9EB00F34D15 /* 002.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 002.mp3; sourceTree = "<group>"; };
-		E9336A4F1959C9EB00F34D15 /* 003.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 003.mp3; sourceTree = "<group>"; };
-		E9336A501959C9EB00F34D15 /* 004.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 004.mp3; sourceTree = "<group>"; };
-		E9336A511959C9EB00F34D15 /* 005.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 005.mp3; sourceTree = "<group>"; };
-		E9336A521959C9EB00F34D15 /* 006.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 006.mp3; sourceTree = "<group>"; };
-		E9336A531959C9EB00F34D15 /* 007.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 007.mp3; sourceTree = "<group>"; };
 		E93AED3A191D264B001B2199 /* Appirater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appirater.h; sourceTree = "<group>"; };
 		E93AED3B191D264B001B2199 /* Appirater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appirater.m; sourceTree = "<group>"; };
 		E93AED3D191D277E001B2199 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -500,6 +471,16 @@
 		E9C0669E195B0EB500F6D8A7 /* M2PianoEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2PianoEffect.h; sourceTree = "<group>"; };
 		E9C0669F195B0EB500F6D8A7 /* M2PianoEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2PianoEffect.m; sourceTree = "<group>"; };
 		E9C066A4195B0F2F00F6D8A7 /* Effect.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Effect.txt; sourceTree = "<group>"; };
+		E9C066A9195B29B000F6D8A7 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		E9C066AA195B29B000F6D8A7 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "m2048/zh-Hant.lproj/Main_iPad.strings"; sourceTree = "<group>"; };
+		E9C066AB195B29B000F6D8A7 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		E9C066AC195B29B000F6D8A7 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		E9C066AD195B29B700F6D8A7 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E9C066AE195B29B700F6D8A7 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		E9C066AF195B29BA00F6D8A7 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		E9C066B0195B29BB00F6D8A7 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E9C066B1195B29BB00F6D8A7 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		E9C066B2195B29BD00F6D8A7 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		E9DD371B192A42D5002332FB /* iAdDemo_AppStoreSafe_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAdDemo_AppStoreSafe_Prefix.pch; sourceTree = "<group>"; };
 		E9DD371C192A42D5002332FB /* iAdsDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iAdsDemoViewController.m; sourceTree = "<group>"; };
 		E9DD371D192A42D5002332FB /* iAdsDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAdsDemoViewController.h; sourceTree = "<group>"; };
@@ -862,13 +843,6 @@
 			isa = PBXGroup;
 			children = (
 				E9C066A4195B0F2F00F6D8A7 /* Effect.txt */,
-				E9336A4D1959C9EB00F34D15 /* 001.mp3 */,
-				E9336A4E1959C9EB00F34D15 /* 002.mp3 */,
-				E9336A4F1959C9EB00F34D15 /* 003.mp3 */,
-				E9336A501959C9EB00F34D15 /* 004.mp3 */,
-				E9336A511959C9EB00F34D15 /* 005.mp3 */,
-				E9336A521959C9EB00F34D15 /* 006.mp3 */,
-				E9336A531959C9EB00F34D15 /* 007.mp3 */,
 				E950A3891958667A00462FD7 /* sound1.mp3 */,
 				E950A38A1958667A00462FD7 /* sound2.mp3 */,
 				E950A38B1958667A00462FD7 /* sound3.mp3 */,
@@ -1065,6 +1039,7 @@
 				en,
 				Base,
 				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 2443DC4918D662CA00C920C1;
 			productRefGroup = 2443DC5318D662CA00C920C1 /* Products */;
@@ -1085,9 +1060,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9336A541959C9EB00F34D15 /* 001.mp3 in Resources */,
-				E9336A641959C9EB00F34D15 /* 005.mp3 in Resources */,
-				E9336A601959C9EB00F34D15 /* 004.mp3 in Resources */,
 				E93AEDA0191E48FB001B2199 /* featureCheck.php in Resources */,
 				E950A3CF1958667A00462FD7 /* sound12.mp3 in Resources */,
 				E97984F0192E3BF80024EFAA /* Images.xcassets in Resources */,
@@ -1102,6 +1074,7 @@
 				E950A3E31958667A00462FD7 /* sound17.mp3 in Resources */,
 				E950A3C71958667A00462FD7 /* sound10.mp3 in Resources */,
 				E93AED9F191E48FB001B2199 /* DBSetup.sql in Resources */,
+				E9C066B7195B2DF700F6D8A7 /* Localizable.strings in Resources */,
 				E950A3BB1958667A00462FD7 /* sound7.mp3 in Resources */,
 				E950A4071958667A00462FD7 /* sound26.mp3 in Resources */,
 				E950A3AF1958667A00462FD7 /* sound4.mp3 in Resources */,
@@ -1113,7 +1086,6 @@
 				E93AED9B191E48FB001B2199 /* MKStoreKitConfigs.plist in Resources */,
 				E93AED9E191E48FB001B2199 /* AddDevice.html in Resources */,
 				E950A3F31958667A00462FD7 /* sound21.mp3 in Resources */,
-				E9336A681959C9EB00F34D15 /* 006.mp3 in Resources */,
 				E93AEDB8191E8502001B2199 /* Main.strings in Resources */,
 				E950A3A31958667A00462FD7 /* sound1.mp3 in Resources */,
 				E950A3C31958667A00462FD7 /* sound9.mp3 in Resources */,
@@ -1122,17 +1094,16 @@
 				E93AEDB7191E8502001B2199 /* Localizable.strings in Resources */,
 				E950A3BF1958667A00462FD7 /* sound8.mp3 in Resources */,
 				E950A3D31958667A00462FD7 /* sound13.mp3 in Resources */,
+				E9C066B5195B2DD600F6D8A7 /* Main_iPad.storyboard in Resources */,
 				E93AEDA1191E48FB001B2199 /* requestAccess.php in Resources */,
 				E950A3DF1958667A00462FD7 /* sound16.mp3 in Resources */,
-				E9336A6C1959C9EB00F34D15 /* 007.mp3 in Resources */,
-				E9336A581959C9EB00F34D15 /* 002.mp3 in Resources */,
 				E950A3AB1958667A00462FD7 /* sound3.mp3 in Resources */,
 				E950A3B31958667A00462FD7 /* sound5.mp3 in Resources */,
 				E950A3F71958667A00462FD7 /* sound22.mp3 in Resources */,
 				E93AEDAE191E84EE001B2199 /* Main.strings in Resources */,
+				E9C066B3195B2D8B00F6D8A7 /* Main.strings in Resources */,
 				E950A3EF1958667A00462FD7 /* sound20.mp3 in Resources */,
 				E93AEDAC191E84EE001B2199 /* InfoPlist.strings in Resources */,
-				E9336A5C1959C9EB00F34D15 /* 003.mp3 in Resources */,
 				E93AED9D191E48FB001B2199 /* README.mdown in Resources */,
 				E950A3CB1958667A00462FD7 /* sound11.mp3 in Resources */,
 			);
@@ -1150,14 +1121,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9336A6D1959C9EB00F34D15 /* 007.mp3 in Resources */,
 				E950A3D81958667A00462FD7 /* sound14.mp3 in Resources */,
 				E9413B0F19212709007FABFB /* featureCheck.php in Resources */,
 				E950A3E81958667A00462FD7 /* sound18.mp3 in Resources */,
 				E9413B5B1921357D007FABFB /* Main.strings in Resources */,
 				E9413B3419212C52007FABFB /* MKStoreKitConfigs_iPad.plist in Resources */,
 				E9F0EE6219225B9C00CA2B8A /* Main_iPad.storyboard in Resources */,
-				E9336A551959C9EB00F34D15 /* 001.mp3 in Resources */,
 				E950A3AC1958667A00462FD7 /* sound3.mp3 in Resources */,
 				E950A4041958667A00462FD7 /* sound25.mp3 in Resources */,
 				E9413B1119212709007FABFB /* Localizable.strings in Resources */,
@@ -1165,9 +1134,7 @@
 				E950A3E41958667A00462FD7 /* sound17.mp3 in Resources */,
 				E950A3B81958667A00462FD7 /* sound6.mp3 in Resources */,
 				E950A3BC1958667A00462FD7 /* sound7.mp3 in Resources */,
-				E9336A651959C9EB00F34D15 /* 005.mp3 in Resources */,
 				E950A3A41958667A00462FD7 /* sound1.mp3 in Resources */,
-				E9336A591959C9EB00F34D15 /* 002.mp3 in Resources */,
 				E950A3C41958667A00462FD7 /* sound9.mp3 in Resources */,
 				E9413B1319212709007FABFB /* InfoPlist.strings in Resources */,
 				E9413B4E19213540007FABFB /* InfoPlist.strings in Resources */,
@@ -1176,7 +1143,6 @@
 				E950A3C81958667A00462FD7 /* sound10.mp3 in Resources */,
 				E950A3FC1958667A00462FD7 /* sound23.mp3 in Resources */,
 				E9413B5019213540007FABFB /* Main.strings in Resources */,
-				E9336A691959C9EB00F34D15 /* 006.mp3 in Resources */,
 				E950A3EC1958667A00462FD7 /* sound19.mp3 in Resources */,
 				E9413B591921357D007FABFB /* InfoPlist.strings in Resources */,
 				E9413B5A1921357D007FABFB /* Localizable.strings in Resources */,
@@ -1196,13 +1162,11 @@
 				E950A3DC1958667A00462FD7 /* sound15.mp3 in Resources */,
 				E950A4081958667A00462FD7 /* sound26.mp3 in Resources */,
 				E950A3E01958667A00462FD7 /* sound16.mp3 in Resources */,
-				E9336A5D1959C9EB00F34D15 /* 003.mp3 in Resources */,
 				E950A4001958667A00462FD7 /* sound24.mp3 in Resources */,
 				E950A3F81958667A00462FD7 /* sound22.mp3 in Resources */,
 				E950A3F01958667A00462FD7 /* sound20.mp3 in Resources */,
 				E9413B1C19212709007FABFB /* Main.strings in Resources */,
 				E950A3D41958667A00462FD7 /* sound13.mp3 in Resources */,
-				E9336A611959C9EB00F34D15 /* 004.mp3 in Resources */,
 				E9413B1E19212709007FABFB /* README.mdown in Resources */,
 				E950A3F41958667A00462FD7 /* sound21.mp3 in Resources */,
 			);
@@ -1212,9 +1176,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9336A561959C9EB00F34D15 /* 001.mp3 in Resources */,
-				E9336A661959C9EB00F34D15 /* 005.mp3 in Resources */,
-				E9336A621959C9EB00F34D15 /* 004.mp3 in Resources */,
 				E954FB0619309C2E005E1275 /* featureCheck.php in Resources */,
 				E950A3D11958667A00462FD7 /* sound12.mp3 in Resources */,
 				E954FB0719309C2E005E1275 /* Images.xcassets in Resources */,
@@ -1229,6 +1190,7 @@
 				E950A3E51958667A00462FD7 /* sound17.mp3 in Resources */,
 				E950A3C91958667A00462FD7 /* sound10.mp3 in Resources */,
 				E954FB0A19309C2E005E1275 /* DBSetup.sql in Resources */,
+				E9C066B8195B2DF800F6D8A7 /* Localizable.strings in Resources */,
 				E950A3BD1958667A00462FD7 /* sound7.mp3 in Resources */,
 				E950A4091958667A00462FD7 /* sound26.mp3 in Resources */,
 				E950A3B11958667A00462FD7 /* sound4.mp3 in Resources */,
@@ -1240,7 +1202,6 @@
 				E954FB0D19309C2E005E1275 /* MKStoreKitConfigs.plist in Resources */,
 				E954FB0E19309C2E005E1275 /* AddDevice.html in Resources */,
 				E950A3F51958667A00462FD7 /* sound21.mp3 in Resources */,
-				E9336A6A1959C9EB00F34D15 /* 006.mp3 in Resources */,
 				E954FB0F19309C2E005E1275 /* Main.strings in Resources */,
 				E950A3A51958667A00462FD7 /* sound1.mp3 in Resources */,
 				E950A3C51958667A00462FD7 /* sound9.mp3 in Resources */,
@@ -1249,17 +1210,16 @@
 				E954FB1119309C2E005E1275 /* Localizable.strings in Resources */,
 				E950A3C11958667A00462FD7 /* sound8.mp3 in Resources */,
 				E950A3D51958667A00462FD7 /* sound13.mp3 in Resources */,
+				E9C066B6195B2DD700F6D8A7 /* Main_iPad.storyboard in Resources */,
 				E954FB1219309C2E005E1275 /* requestAccess.php in Resources */,
 				E950A3E11958667A00462FD7 /* sound16.mp3 in Resources */,
-				E9336A6E1959C9EB00F34D15 /* 007.mp3 in Resources */,
-				E9336A5A1959C9EB00F34D15 /* 002.mp3 in Resources */,
 				E950A3AD1958667A00462FD7 /* sound3.mp3 in Resources */,
 				E950A3B51958667A00462FD7 /* sound5.mp3 in Resources */,
 				E950A3F91958667A00462FD7 /* sound22.mp3 in Resources */,
 				E954FB1319309C2E005E1275 /* Main.strings in Resources */,
+				E9C066B4195B2D8C00F6D8A7 /* Main.strings in Resources */,
 				E950A3F11958667A00462FD7 /* sound20.mp3 in Resources */,
 				E954FB1419309C2E005E1275 /* InfoPlist.strings in Resources */,
-				E9336A5E1959C9EB00F34D15 /* 003.mp3 in Resources */,
 				E954FB1519309C2E005E1275 /* README.mdown in Resources */,
 				E950A3CD1958667A00462FD7 /* sound11.mp3 in Resources */,
 			);
@@ -1269,14 +1229,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9336A6F1959C9EB00F34D15 /* 007.mp3 in Resources */,
 				E950A3DA1958667A00462FD7 /* sound14.mp3 in Resources */,
 				E954FB3D1930A5CA005E1275 /* featureCheck.php in Resources */,
 				E950A3EA1958667A00462FD7 /* sound18.mp3 in Resources */,
 				E954FB3E1930A5CA005E1275 /* Main.strings in Resources */,
 				E954FB3F1930A5CA005E1275 /* MKStoreKitConfigs_iPad.plist in Resources */,
 				E954FB401930A5CA005E1275 /* Main_iPad.storyboard in Resources */,
-				E9336A571959C9EB00F34D15 /* 001.mp3 in Resources */,
 				E950A3AE1958667A00462FD7 /* sound3.mp3 in Resources */,
 				E950A4061958667A00462FD7 /* sound25.mp3 in Resources */,
 				E954FB411930A5CA005E1275 /* Localizable.strings in Resources */,
@@ -1284,9 +1242,7 @@
 				E950A3E61958667A00462FD7 /* sound17.mp3 in Resources */,
 				E950A3BA1958667A00462FD7 /* sound6.mp3 in Resources */,
 				E950A3BE1958667A00462FD7 /* sound7.mp3 in Resources */,
-				E9336A671959C9EB00F34D15 /* 005.mp3 in Resources */,
 				E950A3A61958667A00462FD7 /* sound1.mp3 in Resources */,
-				E9336A5B1959C9EB00F34D15 /* 002.mp3 in Resources */,
 				E950A3C61958667A00462FD7 /* sound9.mp3 in Resources */,
 				E954FB431930A5CA005E1275 /* InfoPlist.strings in Resources */,
 				E954FB441930A5CA005E1275 /* InfoPlist.strings in Resources */,
@@ -1295,7 +1251,6 @@
 				E950A3CA1958667A00462FD7 /* sound10.mp3 in Resources */,
 				E950A3FE1958667A00462FD7 /* sound23.mp3 in Resources */,
 				E954FB461930A5CA005E1275 /* Main.strings in Resources */,
-				E9336A6B1959C9EB00F34D15 /* 006.mp3 in Resources */,
 				E950A3EE1958667A00462FD7 /* sound19.mp3 in Resources */,
 				E954FB471930A5CA005E1275 /* InfoPlist.strings in Resources */,
 				E954FB481930A5CA005E1275 /* Localizable.strings in Resources */,
@@ -1315,13 +1270,11 @@
 				E950A3DE1958667A00462FD7 /* sound15.mp3 in Resources */,
 				E950A40A1958667A00462FD7 /* sound26.mp3 in Resources */,
 				E950A3E21958667A00462FD7 /* sound16.mp3 in Resources */,
-				E9336A5F1959C9EB00F34D15 /* 003.mp3 in Resources */,
 				E950A4021958667A00462FD7 /* sound24.mp3 in Resources */,
 				E950A3FA1958667A00462FD7 /* sound22.mp3 in Resources */,
 				E950A3F21958667A00462FD7 /* sound20.mp3 in Resources */,
 				E954FB501930A5CA005E1275 /* Main.strings in Resources */,
 				E950A3D61958667A00462FD7 /* sound13.mp3 in Resources */,
-				E9336A631959C9EB00F34D15 /* 004.mp3 in Resources */,
 				E954FB511930A5CA005E1275 /* README.mdown in Resources */,
 				E950A3F61958667A00462FD7 /* sound21.mp3 in Resources */,
 			);
@@ -1482,6 +1435,7 @@
 			children = (
 				2443DC6118D662CA00C920C1 /* en */,
 				E93AED5D191E02A5001B2199 /* zh-Hans */,
+				E9C066A9195B29B000F6D8A7 /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1492,6 +1446,7 @@
 				2443DC6A18D662CA00C920C1 /* Base */,
 				E93AED60191E0379001B2199 /* zh-Hans */,
 				E93AED62191E037D001B2199 /* en */,
+				E9C066AB195B29B000F6D8A7 /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1501,6 +1456,7 @@
 			children = (
 				2443DC8518D662CA00C920C1 /* en */,
 				E93AED5E191E02A5001B2199 /* zh-Hans */,
+				E9C066B2195B29BD00F6D8A7 /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1509,6 +1465,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E93AEDA7191E84EE001B2199 /* zh-Hans */,
+				E9C066AF195B29BA00F6D8A7 /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1533,6 +1490,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E93AEDB1191E8502001B2199 /* en */,
+				E9C066AC195B29B000F6D8A7 /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1565,6 +1523,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E9413B4B19213540007FABFB /* zh-Hans */,
+				E9C066B0195B29BB00F6D8A7 /* zh-Hant */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1573,6 +1532,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E9413B4D19213540007FABFB /* zh-Hans */,
+				E9C066B1195B29BB00F6D8A7 /* zh-Hant */,
 			);
 			name = Main.strings;
 			sourceTree = "<group>";
@@ -1589,6 +1549,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E9413B561921357D007FABFB /* en */,
+				E9C066AD195B29B700F6D8A7 /* zh-Hant */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1597,6 +1558,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E9413B581921357D007FABFB /* en */,
+				E9C066AE195B29B700F6D8A7 /* zh-Hant */,
 			);
 			name = Main.strings;
 			sourceTree = "<group>";
@@ -1607,6 +1569,7 @@
 				E9F0EE6119225B9C00CA2B8A /* Base */,
 				E976932E19226633006E3575 /* zh-Hans */,
 				E976932F192267D8006E3575 /* en */,
+				E9C066AA195B29B000F6D8A7 /* zh-Hant */,
 			);
 			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
@@ -1875,7 +1838,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Deluxe_iPad";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-ipad";
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jiang LinShan (E8TB3WBKTR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiang LinShan (453PQT5LKA)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jiang LinShan (E8TB3WBKTR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "m2048/m2048-Prefix.pch";
@@ -1889,7 +1852,7 @@
 				INFOPLIST_FILE = "m2048-iPad copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "m2048-iPad copy";
-				PROVISIONING_PROFILE = "95E51D0A-C352-467F-9428-9559C4C6617E";
+				PROVISIONING_PROFILE = "9725CFBC-A52A-430B-A759-24229B1F0EFA";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
@@ -1902,7 +1865,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Deluxe_iPad";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-ipad";
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jiang LinShan (E8TB3WBKTR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiang LinShan (453PQT5LKA)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jiang LinShan (E8TB3WBKTR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "m2048/m2048-Prefix.pch";
@@ -1914,7 +1877,7 @@
 				INFOPLIST_FILE = "m2048-iPad copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "m2048-iPad copy";
-				PROVISIONING_PROFILE = "95E51D0A-C352-467F-9428-9559C4C6617E";
+				PROVISIONING_PROFILE = "9725CFBC-A52A-430B-A759-24229B1F0EFA";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;

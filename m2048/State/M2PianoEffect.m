@@ -52,6 +52,7 @@
         }
         
         pRet = (NSArray*)[effectArr objectAtIndex:(arc4random()%count)];
+//        pRet = (NSArray*)[effectArr objectAtIndex:7];
     }
     
     return pRet;
@@ -59,6 +60,7 @@
 
 -(void)playEffect{
     [self playSound:[NSString stringWithFormat:@"/sound%d.mp3",[[curArr objectAtIndex:soundID] intValue]]];
+    NSLog(@"sound:%d,value:%d",soundID,[[curArr objectAtIndex:soundID] intValue]);
     
     if (soundID < [curArr count] - 1) {
         soundID++;
