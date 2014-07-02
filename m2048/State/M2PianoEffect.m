@@ -7,10 +7,20 @@
 //
 
 #import "M2PianoEffect.h"
+#import "HanaConfig.h"
 
+static M2PianoEffect *sharedEffect = nil;
 
 @implementation M2PianoEffect
 @synthesize effectArr;
+
++(M2PianoEffect*)sharedEffect{
+    if (sharedEffect == nil) {
+        sharedEffect = [[M2PianoEffect alloc] init];
+    }
+    
+    return sharedEffect;
+}
 
 -(id)init{
     player = [[SKNode alloc] init];
@@ -59,15 +69,26 @@
 }
 
 -(void)playEffect{
+    
+    if ([HanaConfig sharedInstance].effectOff) {
+        return;
+    }
+    
     [self playSound:[NSString stringWithFormat:@"/sound%d.mp3",[[curArr objectAtIndex:soundID] intValue]]];
-    NSLog(@"sound:%d,value:%d",soundID,[[curArr objectAtIndex:soundID] intValue]);
+//    NSLog(@"sound:%d,value:%d",soundID,[[curArr objectAtIndex:soundID] intValue]);
     
     if (soundID < [curArr count] - 1) {
         soundID++;
     }else{
-        curArr = [self getCurEffectRandom];
-        soundID = 0;
+//        curArr = [self getCurEffectRandom];
+//        soundID = 0;
+        [self changeEffectSong];
     }
+}
+
+-(void)changeEffectSong{
+    curArr = [self getCurEffectRandom];
+    soundID = 0;
 }
 
 -(void)playSound:(NSString*)soundKey{

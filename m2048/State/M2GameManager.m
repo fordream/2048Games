@@ -51,7 +51,7 @@ BOOL iterate(NSInteger value, BOOL countUp, NSInteger upper, NSInteger lower) {
 
 -(id)init{
 
-   _pianoEffect = [[M2PianoEffect alloc] init];
+   _pianoEffect = [M2PianoEffect sharedEffect];
     return [super init];
 }
 
@@ -207,6 +207,11 @@ BOOL iterate(NSInteger value, BOOL countUp, NSInteger upper, NSInteger lower) {
     // we will be starting a new game, so the current state is no longer relevant.
     _keepPlaying = YES;
     [_grid.scene.delegate endGame:YES];
+      
+      //change a new piano effect song
+      [_pianoEffect changeEffectSong];
+      NSLog(@"change song");
+      
   }
     
   // Add one more tile to the grid.

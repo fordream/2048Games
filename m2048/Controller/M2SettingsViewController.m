@@ -10,6 +10,7 @@
 #import "M2SettingsDetailViewController.h"
 #import "MKStoreManager.h"
 #import "M2AppDelegate.h"
+#import "HanaConfig.h"
 
 @interface M2SettingsViewController ()
 
@@ -98,26 +99,48 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+//    NSInteger pRet;
+//#ifdef TAG_DELUXE
+//    pRet = 1;
+//#else
+//    if ([M2AppDelegate hadRemovedAds]) {
+//        NSLog(@"111");
+//        pRet = 1;
+//    }else{
+//        NSLog(@"222");
+//        pRet = 2;
+//    }
+//#endif
+//  return pRet;
     NSInteger pRet;
 #ifdef TAG_DELUXE
-    pRet = 1;
+    pRet = 2;
 #else
     if ([M2AppDelegate hadRemovedAds]) {
         NSLog(@"111");
-        pRet = 1;
+        pRet = 2;
     }else{
         NSLog(@"222");
-        pRet = 2;
+        pRet = 3;
     }
 #endif
-  return pRet;
+    return pRet;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-//  return section ? 1 : _options.count;
-    return section ? 2 : _options.count;
+    
+//    return section ? 2 : _options.count;
+    NSInteger pRet;
+    if (section == 0) {
+        pRet = _options.count;
+    }else if (section == 1){
+        pRet = 1;
+    }else if (section == 2){
+        pRet = 2;
+    }
+    return pRet;
 
 }
 
@@ -133,7 +156,7 @@
 {
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Settings Cell"];
   
-  if (indexPath.section == 1) {
+  if (indexPath.section == 2) {
 //    cell.textLabel.text = @"About 2048";
 //    cell.detailTextLabel.text = @"";
       if (indexPath.row == 0) {
@@ -146,7 +169,15 @@
           cell.detailTextLabel.text = @"";
       }
 
-  } else {
+  }else if (indexPath.section == 1){
+      cell.textLabel.text = NSLocalizedString(@"Pino Effects",nil);
+
+      if ([HanaConfig sharedInstance].effectOff == false) {
+          cell.detailTextLabel.text = NSLocalizedString(@"On",nil);
+      }else{
+          cell.detailTextLabel.text = NSLocalizedString(@"Off",nil);
+      }
+  }else {
 //    cell.textLabel.text = [_options objectAtIndex:indexPath.row];
       //***
       cell.textLabel.text = [_optionsShow objectAtIndex:indexPath.row];
@@ -162,66 +193,148 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSLog(@"section%d,index%d",indexPath.section,indexPath.row);
-  if (indexPath.section == 1) {
-      
-      if (indexPath.row == 0) {
-          if([SKPaymentQueue canMakePayments] && ![M2AppDelegate hadRemovedAds] && [[MKStoreManager sharedManager].purchasableObjects count]) {
-              
-              UIAlertView *alertConnect = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connecting to App Store...", nil)
-                                                                     message:nil
+//  if (indexPath.section == 1) {
+//      
+//      if (indexPath.row == 0) {
+//          if([SKPaymentQueue canMakePayments] && ![M2AppDelegate hadRemovedAds] && [[MKStoreManager sharedManager].purchasableObjects count]) {
+//              
+//              UIAlertView *alertConnect = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connecting to App Store...", nil)
+//                                                                     message:nil
+//                                                                    delegate:nil
+//                                                           cancelButtonTitle:nil
+//                                                           otherButtonTitles:nil];
+//              [alertConnect show];
+//              
+//              
+//              SKProduct* product = [[MKStoreManager sharedManager].purchasableObjects objectAtIndex:0];
+//              [[MKStoreManager sharedManager]
+//               buyFeature:product.productIdentifier
+//               onComplete:^(NSString* purchasedFeature, NSData*purchasedReceipt, NSArray* availableDownloads)
+//               {
+//                   NSLog(@"Purchased: %@", purchasedFeature);
+//                   [alertConnect dismissWithClickedButtonIndex:0 animated:YES];
+//                   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Purchase Successful", nil)
+//                                                                   message:NSLocalizedString(@"Thank you. You have successfully remove all Ads",nil)
+//                                                                  delegate:nil
+//                                                         cancelButtonTitle:NSLocalizedString(@"OK",nil)
+//                                                         otherButtonTitles:nil];
+//                   [alert show];
+//                   [[NSUserDefaults standardUserDefaults] setBool:YES forKey:AdsRemoved];
+//               }
+//               onCancelled:^
+//               {
+//                   [alertConnect dismissWithClickedButtonIndex:0 animated:YES];
+//                   NSLog(@"User Cancelled Transaction");
+//                   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Purchase Failed",nil)
+//                                                                   message:NSLocalizedString(@"Unfortunately you have cancelled your purchase of remove Ads. Please try again.",nil)
+//                                                                  delegate:nil
+//                                                         cancelButtonTitle:NSLocalizedString(@"OK",nil)
+//                                                         otherButtonTitles:nil];
+//                   [alert show];
+//               }
+//               ];
+//              
+//              [alertConnect dismissWithClickedButtonIndex:0 animated:YES];
+//          }else{
+//            [[MKStoreManager sharedManager]restorePreviousTransactionsOnComplete:^{NSLog(@"RESTORED PREVIOUS PURCHASE");} onError:nil];
+//          }
+//      
+//      }else if(indexPath.row == 1){
+//          UIAlertView *alertConnect = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connecting to App Store failed!", nil)
+//                                                                 message:NSLocalizedString(@"Please try later!",nil)
+//                                                                delegate:nil
+//                                                       cancelButtonTitle:NSLocalizedString(@"OK",nil)
+//                                                       otherButtonTitles:nil];
+//          [alertConnect show];
+//      }
+//      
+//    
+//  } else {
+//    [self performSegueWithIdentifier:@"Settings Detail Segue" sender:nil];
+//  }
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+
+    if (indexPath.section == 2) {
+        cell.selected = false;
+        if (indexPath.row == 0) {
+            if([SKPaymentQueue canMakePayments] && ![M2AppDelegate hadRemovedAds] && [[MKStoreManager sharedManager].purchasableObjects count]) {
+                
+                UIAlertView *alertConnect = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connecting to App Store...", nil)
+                                                                       message:nil
+                                                                      delegate:nil
+                                                             cancelButtonTitle:nil
+                                                             otherButtonTitles:nil];
+                [alertConnect show];
+                
+                
+                SKProduct* product = [[MKStoreManager sharedManager].purchasableObjects objectAtIndex:0];
+                [[MKStoreManager sharedManager]
+                 buyFeature:product.productIdentifier
+                 onComplete:^(NSString* purchasedFeature, NSData*purchasedReceipt, NSArray* availableDownloads)
+                 {
+                     NSLog(@"Purchased: %@", purchasedFeature);
+                     [alertConnect dismissWithClickedButtonIndex:0 animated:YES];
+                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Purchase Successful", nil)
+                                                                     message:NSLocalizedString(@"Thank you. You have successfully remove all Ads",nil)
                                                                     delegate:nil
-                                                           cancelButtonTitle:nil
+                                                           cancelButtonTitle:NSLocalizedString(@"OK",nil)
                                                            otherButtonTitles:nil];
-              [alertConnect show];
-              
-              
-              SKProduct* product = [[MKStoreManager sharedManager].purchasableObjects objectAtIndex:0];
-              [[MKStoreManager sharedManager]
-               buyFeature:product.productIdentifier
-               onComplete:^(NSString* purchasedFeature, NSData*purchasedReceipt, NSArray* availableDownloads)
-               {
-                   NSLog(@"Purchased: %@", purchasedFeature);
-                   [alertConnect dismissWithClickedButtonIndex:0 animated:YES];
-                   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Purchase Successful", nil)
-                                                                   message:NSLocalizedString(@"Thank you. You have successfully remove all Ads",nil)
-                                                                  delegate:nil
-                                                         cancelButtonTitle:NSLocalizedString(@"OK",nil)
-                                                         otherButtonTitles:nil];
-                   [alert show];
-                   [[NSUserDefaults standardUserDefaults] setBool:YES forKey:AdsRemoved];
-               }
-               onCancelled:^
-               {
-                   [alertConnect dismissWithClickedButtonIndex:0 animated:YES];
-                   NSLog(@"User Cancelled Transaction");
-                   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Purchase Failed",nil)
-                                                                   message:NSLocalizedString(@"Unfortunately you have cancelled your purchase of remove Ads. Please try again.",nil)
-                                                                  delegate:nil
-                                                         cancelButtonTitle:NSLocalizedString(@"OK",nil)
-                                                         otherButtonTitles:nil];
-                   [alert show];
-               }
-               ];
-              
-              [alertConnect dismissWithClickedButtonIndex:0 animated:YES];
-          }else{
+                     [alert show];
+                     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:AdsRemoved];
+                 }
+                 onCancelled:^
+                 {
+                     [alertConnect dismissWithClickedButtonIndex:0 animated:YES];
+                     NSLog(@"User Cancelled Transaction");
+                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Purchase Failed",nil)
+                                                                     message:NSLocalizedString(@"Unfortunately you have cancelled your purchase of remove Ads. Please try again.",nil)
+                                                                    delegate:nil
+                                                           cancelButtonTitle:NSLocalizedString(@"OK",nil)
+                                                           otherButtonTitles:nil];
+                     [alert show];
+                 }
+                 ];
+                
+                [alertConnect dismissWithClickedButtonIndex:0 animated:YES];
+            }else{
+//                [[MKStoreManager sharedManager]restorePreviousTransactionsOnComplete:^{NSLog(@"RESTORED PREVIOUS PURCHASE");} onError:nil];
+                UIAlertView *alertConnect = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connecting to App Store failed!", nil)
+                                                                       message:NSLocalizedString(@"Please try later!",nil)
+                                                                      delegate:nil
+                                                             cancelButtonTitle:NSLocalizedString(@"OK",nil)
+                                                             otherButtonTitles:nil];
+                [alertConnect show];
+            }
+            
+        }else if(indexPath.row == 1){
+//            UIAlertView *alertConnect = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connecting to App Store failed!", nil)
+//                                                                   message:NSLocalizedString(@"Please try later!",nil)
+//                                                                  delegate:nil
+//                                                         cancelButtonTitle:NSLocalizedString(@"OK",nil)
+//                                                         otherButtonTitles:nil];
+//            [alertConnect show];
             [[MKStoreManager sharedManager]restorePreviousTransactionsOnComplete:^{NSLog(@"RESTORED PREVIOUS PURCHASE");} onError:nil];
-          }
-      
-      }else if(indexPath.row == 1){
-          UIAlertView *alertConnect = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connecting to App Store failed!", nil)
-                                                                 message:NSLocalizedString(@"Please tray later!",nil)
-                                                                delegate:nil
-                                                       cancelButtonTitle:NSLocalizedString(@"OK",nil)
-                                                       otherButtonTitles:nil];
-          [alertConnect show];
-      }
-      
-    
-  } else {
-    [self performSegueWithIdentifier:@"Settings Detail Segue" sender:nil];
-  }
+
+        }
+        
+        
+    }else if (indexPath.section == 1){
+        NSLog(@"onoff");
+        
+        cell.selected = false;
+        
+        if ([HanaConfig sharedInstance].effectOff == false) {
+            cell.detailTextLabel.text = NSLocalizedString(@"Off",nil);
+            [HanaConfig sharedInstance].effectOff = true;
+        }else{
+            cell.detailTextLabel.text = NSLocalizedString(@"On",nil);
+            [HanaConfig sharedInstance].effectOff = false;
+        }
+        [[HanaConfig sharedInstance] saveState];
+    }else {
+        [self performSegueWithIdentifier:@"Settings Detail Segue" sender:nil];
+    }
+
 }
 
 @end

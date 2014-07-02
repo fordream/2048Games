@@ -326,6 +326,14 @@
 		E9C066B6195B2DD700F6D8A7 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F0EE6019225B9C00CA2B8A /* Main_iPad.storyboard */; };
 		E9C066B7195B2DF700F6D8A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9413B4A19213540007FABFB /* Localizable.strings */; };
 		E9C066B8195B2DF800F6D8A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9413B4A19213540007FABFB /* Localizable.strings */; };
+		E9DCC6351964550700CA8BEA /* HanaConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DCC6341964550700CA8BEA /* HanaConfig.m */; };
+		E9DCC6361964550700CA8BEA /* HanaConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DCC6341964550700CA8BEA /* HanaConfig.m */; };
+		E9DCC6371964550700CA8BEA /* HanaConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DCC6341964550700CA8BEA /* HanaConfig.m */; };
+		E9DCC6381964550700CA8BEA /* HanaConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DCC6341964550700CA8BEA /* HanaConfig.m */; };
+		E9DCC63B1964557400CA8BEA /* DSUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DCC63A1964557400CA8BEA /* DSUtility.m */; };
+		E9DCC63C1964557500CA8BEA /* DSUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DCC63A1964557400CA8BEA /* DSUtility.m */; };
+		E9DCC63D1964557500CA8BEA /* DSUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DCC63A1964557400CA8BEA /* DSUtility.m */; };
+		E9DCC63E1964557500CA8BEA /* DSUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DCC63A1964557400CA8BEA /* DSUtility.m */; };
 		E9DD371E192A42D5002332FB /* iAdsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DD371C192A42D5002332FB /* iAdsDemoViewController.m */; };
 		E9DD371F192A42D5002332FB /* iAdsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DD371C192A42D5002332FB /* iAdsDemoViewController.m */; };
 		E9F0EE6219225B9C00CA2B8A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F0EE6019225B9C00CA2B8A /* Main_iPad.storyboard */; };
@@ -481,6 +489,10 @@
 		E9C066B0195B29BB00F6D8A7 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		E9C066B1195B29BB00F6D8A7 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		E9C066B2195B29BD00F6D8A7 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		E9DCC6331964550700CA8BEA /* HanaConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HanaConfig.h; sourceTree = "<group>"; };
+		E9DCC6341964550700CA8BEA /* HanaConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HanaConfig.m; sourceTree = "<group>"; };
+		E9DCC6391964557400CA8BEA /* DSUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUtility.h; sourceTree = "<group>"; };
+		E9DCC63A1964557400CA8BEA /* DSUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUtility.m; sourceTree = "<group>"; };
 		E9DD371B192A42D5002332FB /* iAdDemo_AppStoreSafe_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAdDemo_AppStoreSafe_Prefix.pch; sourceTree = "<group>"; };
 		E9DD371C192A42D5002332FB /* iAdsDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iAdsDemoViewController.m; sourceTree = "<group>"; };
 		E9DD371D192A42D5002332FB /* iAdsDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAdsDemoViewController.h; sourceTree = "<group>"; };
@@ -605,6 +617,7 @@
 		2443DC5D18D662CA00C920C1 /* m2048 */ = {
 			isa = PBXGroup;
 			children = (
+				E9DCC632196454EB00CA8BEA /* HanaCommon */,
 				E950A3881958666300462FD7 /* piano */,
 				E93AEDA4191E60D8001B2199 /* m2048.entitlements */,
 				E93AED80191E48FA001B2199 /* MKStoreKit */,
@@ -871,6 +884,17 @@
 				E950A3A21958667A00462FD7 /* sound26.mp3 */,
 			);
 			name = piano;
+			sourceTree = "<group>";
+		};
+		E9DCC632196454EB00CA8BEA /* HanaCommon */ = {
+			isa = PBXGroup;
+			children = (
+				E9DCC6331964550700CA8BEA /* HanaConfig.h */,
+				E9DCC6341964550700CA8BEA /* HanaConfig.m */,
+				E9DCC6391964557400CA8BEA /* DSUtility.h */,
+				E9DCC63A1964557400CA8BEA /* DSUtility.m */,
+			);
+			name = HanaCommon;
 			sourceTree = "<group>";
 		};
 		E9DD371A192A42C2002332FB /* iAd */ = {
@@ -1290,6 +1314,7 @@
 				2443DCA618D66CCC00C920C1 /* M2ViewController.m in Sources */,
 				2443DC6418D662CA00C920C1 /* main.m in Sources */,
 				24C4515B18D6DC4A0001FCFD /* M2Cell.m in Sources */,
+				E9DCC6351964550700CA8BEA /* HanaConfig.m in Sources */,
 				24C4516818DD64A90001FCFD /* M2GridView.m in Sources */,
 				2443DC9A18D663FC00C920C1 /* M2Scene.m in Sources */,
 				24C4515E18D6DC740001FCFD /* M2Grid.m in Sources */,
@@ -1303,6 +1328,7 @@
 				E93AEDA3191E48FB001B2199 /* VerificationController.m in Sources */,
 				24C4516418DABABE0001FCFD /* M2GlobalState.m in Sources */,
 				E93AED98191E48FA001B2199 /* SFHFKeychainUtils.m in Sources */,
+				E9DCC63B1964557400CA8BEA /* DSUtility.m in Sources */,
 				E9DD371E192A42D5002332FB /* iAdsDemoViewController.m in Sources */,
 				2443DC6818D662CA00C920C1 /* M2AppDelegate.m in Sources */,
 				E93AED3C191D264B001B2199 /* Appirater.m in Sources */,
@@ -1330,6 +1356,7 @@
 				E9413AEE19212709007FABFB /* M2ViewController.m in Sources */,
 				E9413AEF19212709007FABFB /* main.m in Sources */,
 				E9413AF019212709007FABFB /* M2Cell.m in Sources */,
+				E9DCC6361964550700CA8BEA /* HanaConfig.m in Sources */,
 				E9413AF119212709007FABFB /* M2GridView.m in Sources */,
 				E9413AF219212709007FABFB /* M2Scene.m in Sources */,
 				E9413AF319212709007FABFB /* M2Grid.m in Sources */,
@@ -1343,6 +1370,7 @@
 				E9413AFB19212709007FABFB /* VerificationController.m in Sources */,
 				E9413AFC19212709007FABFB /* M2GlobalState.m in Sources */,
 				E9413AFD19212709007FABFB /* SFHFKeychainUtils.m in Sources */,
+				E9DCC63C1964557500CA8BEA /* DSUtility.m in Sources */,
 				E9DD371F192A42D5002332FB /* iAdsDemoViewController.m in Sources */,
 				E9413AFE19212709007FABFB /* M2AppDelegate.m in Sources */,
 				E9413AFF19212709007FABFB /* Appirater.m in Sources */,
@@ -1362,6 +1390,7 @@
 				E954FAE519309C2E005E1275 /* M2ViewController.m in Sources */,
 				E954FAE619309C2E005E1275 /* main.m in Sources */,
 				E954FAE719309C2E005E1275 /* M2Cell.m in Sources */,
+				E9DCC6371964550700CA8BEA /* HanaConfig.m in Sources */,
 				E954FAE819309C2E005E1275 /* M2GridView.m in Sources */,
 				E954FAE919309C2E005E1275 /* M2Scene.m in Sources */,
 				E954FAEA19309C2E005E1275 /* M2Grid.m in Sources */,
@@ -1375,6 +1404,7 @@
 				E954FAF219309C2E005E1275 /* VerificationController.m in Sources */,
 				E954FAF319309C2E005E1275 /* M2GlobalState.m in Sources */,
 				E954FAF419309C2E005E1275 /* SFHFKeychainUtils.m in Sources */,
+				E9DCC63D1964557500CA8BEA /* DSUtility.m in Sources */,
 				E954FAF519309C2E005E1275 /* iAdsDemoViewController.m in Sources */,
 				E954FAF619309C2E005E1275 /* M2AppDelegate.m in Sources */,
 				E954FAF719309C2E005E1275 /* Appirater.m in Sources */,
@@ -1394,6 +1424,7 @@
 				E954FB1D1930A5CA005E1275 /* M2ViewController.m in Sources */,
 				E954FB1E1930A5CA005E1275 /* main.m in Sources */,
 				E954FB1F1930A5CA005E1275 /* M2Cell.m in Sources */,
+				E9DCC6381964550700CA8BEA /* HanaConfig.m in Sources */,
 				E954FB201930A5CA005E1275 /* M2GridView.m in Sources */,
 				E954FB211930A5CA005E1275 /* M2Scene.m in Sources */,
 				E954FB221930A5CA005E1275 /* M2Grid.m in Sources */,
@@ -1407,6 +1438,7 @@
 				E954FB2A1930A5CA005E1275 /* VerificationController.m in Sources */,
 				E954FB2B1930A5CA005E1275 /* M2GlobalState.m in Sources */,
 				E954FB2C1930A5CA005E1275 /* SFHFKeychainUtils.m in Sources */,
+				E9DCC63E1964557500CA8BEA /* DSUtility.m in Sources */,
 				E954FB2D1930A5CA005E1275 /* iAdsDemoViewController.m in Sources */,
 				E954FB2E1930A5CA005E1275 /* M2AppDelegate.m in Sources */,
 				E954FB2F1930A5CA005E1275 /* Appirater.m in Sources */,

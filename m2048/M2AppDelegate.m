@@ -9,6 +9,7 @@
 #import "M2AppDelegate.h"
 #import "Appirater/Appirater.h"
 #import "MKStoreManager.h"
+#import "HanaConfig.h"
 
 @implementation M2AppDelegate
 
@@ -17,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[HanaConfig sharedInstance] loadState];
 #ifdef TAG_DELUXE
 #else
     [MKStoreManager sharedManager];

@@ -18,8 +18,10 @@ static     int paidEffectKind = 3;
     NSArray* curArr;
     BOOL isPaid;
 }
++(M2PianoEffect*)sharedEffect;
 @property(readonly) NSMutableArray* effectArr;
 -(NSArray*)getCurEffectRandom;
+-(void)changeEffectSong;
 -(void)playEffect;
 - (void)playSound:(NSString*)soundKey;
 @end

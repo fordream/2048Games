@@ -201,6 +201,10 @@ NSLog(@"viewc:%ld", [[MKStoreManager sharedManager].purchasableObjects count]);
 
 - (void)endGame:(BOOL)won
 {
+    NSLog(@"end game");
+    //change a new piano effect song
+    [[M2PianoEffect sharedEffect] changeEffectSong];
+    
   _overlay.hidden = NO;
   _overlay.alpha = 0;
   _overlayBackground.hidden = NO;
